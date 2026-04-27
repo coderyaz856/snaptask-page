@@ -102,7 +102,7 @@
       "name": "Does it drain battery?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The persistent notification uses Android's foreground service API but performs no background polling, network calls, or location tracking. Real-world battery impact is under 1% per day."
+        "text": "No. The persistent notification doesn't poll, sync, or run network calls in the background. It's a passive UI element. Real-world battery impact is under 1% per day."
       }
     },
     {
