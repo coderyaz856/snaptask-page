@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>SnapTask — Capture Tasks From Your Notification Bar (Android)</title>
+<meta name="description" content="SnapTask is the fastest way to capture tasks on Android. Type directly in your notification bar — no app to open. Natural language reminders in 17 languages. Free download.">
+<meta name="keywords" content="notification bar task capture android, quick note from notification, android notification task app, notification widget todo, fastest task capture android, snaptask">
+<meta name="author" content="Quordesk Labs">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://snaptask.org/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://snaptask.org/">
+<meta property="og:title" content="SnapTask — Capture Tasks From Your Notification Bar">
+<meta property="og:description" content="The fastest task capture on Android. Type in your notification — done. 17 languages, smart date parsing, no bloat.">
+<meta property="og:image" content="https://snaptask.org/og-image.png">
+<meta property="og:site_name" content="SnapTask">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SnapTask — Notification-Bar Task Capture for Android">
+<meta name="twitter:description" content="Capture tasks without opening any app. Type directly in your notification bar. 17 languages.">
+<meta name="twitter:image" content="https://snaptask.org/og-image.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/favicon.png">
+
+<!-- JSON-LD: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SnapTask",
+  "operatingSystem": "Android 7.0+",
+  "applicationCategory": "ProductivityApplication",
+  "description": "Capture tasks directly from your Android notification bar. No app to open. Natural-language reminders in 17 languages.",
+  "url": "https://snaptask.org/",
+  "downloadUrl": "https://ftgygh.gumroad.com/l/snaptask-pro",
+  "author": {
+    "@type": "Organization",
+    "name": "Quordesk Labs"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "name": "Free"
+    },
+    {
+      "@type": "Offer",
+      "price": "2",
+      "priceCurrency": "USD",
+      "name": "SnapTask Pro (monthly)"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "ratingCount": "12",
+    "bestRating": "5"
+  }
+}
+</script>
+
+<!-- JSON-LD: FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does notification bar task capture work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SnapTask runs a persistent notification on your Android device. Tap it, type your task directly in the notification, and tap Send. The task is saved instantly without ever opening the app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is SnapTask free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The core notification capture, task list, tags, and basic reminders are 100% free forever. SnapTask Pro adds advanced reminders and customization for $2/month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What languages does SnapTask support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SnapTask understands natural-language dates and reminders in 17 languages including English, French, Spanish, Arabic, German, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Turkish, Polish, Swedish, Hindi, and Indonesian."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it drain battery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The persistent notification uses Android's foreground service API but performs no background polling, network calls, or location tracking. Real-world battery impact is under 1% per day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use SnapTask offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. SnapTask is fully offline-first. All data is stored locally on your device. No account required, no cloud sync, no tracking."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #ffffff;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #0066ff 0%, #0044cc 100%);
+    color: white;
+    padding: 80px 0 100px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+    font-weight: 800;
+  }
+  .hero p.subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    max-width: 640px;
+    margin: 0 auto 40px;
+    opacity: 0.95;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #ffd60a;
+    color: #1a1a1a;
+    padding: 18px 36px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.15rem;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+  .cta-secondary {
+    display: inline-block;
+    margin-left: 12px;
+    color: white;
+    padding: 18px 24px;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  .hero-meta { margin-top: 24px; font-size: 0.9rem; opacity: 0.85; }
+
+  /* Sections */
+  section { padding: 70px 0; }
+  section.alt { background: #f7f9fc; }
+  h2 {
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    margin-bottom: 16px;
+    color: #0a1929;
+  }
+  h3 { font-size: 1.25rem; margin-bottom: 10px; color: #0a1929; }
+  p { margin-bottom: 16px; color: #2a2a2a; }
+
+  /* Problem */
+  .problem-list { list-style: none; margin: 24px 0; }
+  .problem-list li {
+    padding: 12px 0 12px 36px;
+    position: relative;
+    font-size: 1.05rem;
+  }
+  .problem-list li:before {
+    content: "✕";
+    position: absolute;
+    left: 0;
+    color: #dc2626;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  /* Features grid */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+  }
+  .feature {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+  }
+  .feature-icon { font-size: 2rem; margin-bottom: 12px; }
+
+  /* How it works */
+  .steps { counter-reset: step; margin-top: 30px; }
+  .step {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+    align-items: flex-start;
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: #0066ff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  /* FAQ */
+  details {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    background: white;
+  }
+  details summary {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.05rem;
+    color: #0a1929;
+  }
+  details[open] summary { margin-bottom: 12px; }
+
+  /* Final CTA */
+  .final-cta {
+    background: linear-gradient(135deg, #0066ff 0%, #0044cc 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+  }
+  .final-cta h2 { color: white; }
+  .final-cta p { color: rgba(255,255,255,0.95); font-size: 1.15rem; max-width: 600px; margin: 0 auto 30px; }
+
+  /* Footer */
+  footer {
+    background: #0a1929;
+    color: #cbd5e1;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a { color: #93c5fd; text-decoration: none; margin: 0 12px; }
+  footer a:hover { text-decoration: underline; }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .cta-secondary { display: block; margin: 16px 0 0; }
+    section { padding: 50px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <h1>Capture Tasks Without Opening Any App</h1>
+    <p class="subtitle">SnapTask lives in your Android notification bar. Tap it, type your thought, send. The fastest task capture ever built — no app launch, no friction, no forgotten ideas.</p>
+    <a href="https://ftgygh0.systeme.io/35988053" class="cta-button" rel="noopener">Get SnapTask Free</a>
+    <a href="#how-it-works" class="cta-secondary">See how it works ↓</a>
+    <div class="hero-meta">Free forever · Pro from $2/mo · No account required · Android 7.0+</div>
+  </div>
+</header>
+
+<!-- PROBLEM -->
+<section>
+  <div class="container">
+    <h2>Every task app has the same problem.</h2>
+    <p>You have an idea. You unlock your phone, find the app, wait for it to load, tap "+", type, save. By the time you're done, the thought is half-formed — or gone.</p>
+    <ul class="problem-list">
+      <li>Opening Todoist, Google Keep, or Notion takes 4–8 taps.</li>
+      <li>By the time the app loads, you've lost the thought.</li>
+      <li>Voice notes pile up unsorted and forgotten.</li>
+      <li>Sticky-note widgets clutter your home screen.</li>
+    </ul>
+    <p>SnapTask solves this by living where you already are — your notification bar.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="alt" id="how-it-works">
+  <div class="container">
+    <h2>How notification-bar task capture works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Pull down your notification shade</h3>
+          <p>SnapTask sits there always — like a music-player notification, but for your brain.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>Tap the input field and type</h3>
+          <p>"Buy milk tomorrow", "Call mom Friday 3pm", "#book read Sapiens" — just write naturally.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>Tap Send. Done.</h3>
+          <p>Saved instantly. Date parsed automatically in 17 languages. Reminder scheduled if you mentioned a time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section>
+  <div class="container">
+    <h2>Why people switch to SnapTask</h2>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>2-second capture</h3>
+        <p>From thought to saved task in under two seconds. No other Android app comes close.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🌍</div>
+        <h3>17 languages</h3>
+        <p>Type "demain 14h" or "lunes a las 3" — SnapTask understands and schedules the reminder.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <h3>100% offline</h3>
+        <p>No account. No cloud. No tracking. Your tasks live on your device only.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🪶</div>
+        <h3>Lightweight</h3>
+        <p>Under 4 MB. Less than 1% daily battery. No background polling, no ads, no bloat.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏷️</div>
+        <h3>Smart tagging</h3>
+        <p>Type "#work" or "#groceries" anywhere in the task. Filter by tag with one tap.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔔</div>
+        <h3>Natural reminders</h3>
+        <p>"In 2 hours", "next Monday", "domingo a las 9" — just write it. No date picker required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="alt">
+  <div class="container">
+    <h2>Frequently asked questions</h2>
+
+    <details>
+      <summary>How does notification-bar task capture work on Android?</summary>
+      <p>SnapTask uses Android's foreground service API to keep a persistent notification with an input field (RemoteInput) visible at all times. You type directly into the notification — no app launch — and it's saved to a local Room database. The notification is the app's primary UI.</p>
+    </details>
+
+    <details>
+      <summary>Is SnapTask free?</summary>
+      <p>Yes. Core capture, task list, tags, and basic reminders are 100% free forever. SnapTask Pro ($2/month) unlocks advanced reminders, custom badges, and priority feature requests.</p>
+    </details>
+
+    <details>
+      <summary>Will the persistent notification drain my battery?</summary>
+      <p>No. The notification doesn't poll, sync, or run network calls in the background. It's a passive UI element. Real-world battery impact is under 1% per day on a typical phone.</p>
+    </details>
+
+    <details>
+      <summary>Which languages does the date parser support?</summary>
+      <p>17 languages: English, French, Spanish, Arabic, German, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Turkish, Polish, Swedish, Hindi, and Indonesian. Type "tomorrow at 9", "demain 9h", "mañana a las 9" — they all work.</p>
+    </details>
+
+    <details>
+      <summary>Does SnapTask sync to other devices?</summary>
+      <p>Not currently. SnapTask is intentionally offline-first — no account, no cloud, no tracking. Backup/restore via local file export is supported. Optional encrypted sync is on the roadmap for SnapTask Pro.</p>
+    </details>
+
+    <details>
+      <summary>How is SnapTask different from Google Keep or Todoist?</summary>
+      <p>Google Keep and Todoist require you to open the app every time. SnapTask's notification-bar capture is 4–6× faster for the most common use case: jotting a quick task. SnapTask focuses exclusively on capture speed; it's not trying to replace your full project manager.</p>
+    </details>
+
+    <details>
+      <summary>Where can I download SnapTask?</summary>
+      <p>Get the free APK directly from <a href="https://ftgygh.gumroad.com/l/snaptask-pro" rel="noopener">Gumroad</a>. Google Play Store release is in closed testing — <a href="https://ftgygh0.systeme.io/35988053" rel="noopener">join the waitlist</a> to be notified when it goes live.</p>
+    </details>
+
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Stop losing thoughts to friction.</h2>
+    <p>Free forever. No account required. Install in 30 seconds.</p>
+    <a href="https://ftgygh0.systeme.io/35988053" class="cta-button" rel="noopener">Get SnapTask Free</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>© 2026 Quordesk Labs · Built in Morocco</p>
+    <p style="margin-top:12px;">
+      <a href="https://coderyaz856.github.io/SnapTask/">Privacy Policy</a> ·
+      <a href="https://ftgygh.gumroad.com/l/snaptask-pro">Gumroad</a> ·
+      <a href="https://www.youtube.com/shorts/3c-OFit1xvg">Demo</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
