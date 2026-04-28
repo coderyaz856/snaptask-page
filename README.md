@@ -19,7 +19,6 @@ SnapTask is an Android productivity app that lives in your **notification bar**.
 - 🔔 **Reliable reminders** — exact alarms with reboot persistence
 - 💾 **Local-first** — your tasks stay on your device (Room/SQLite)
 - 🎨 **Material 3 + edge-to-edge** — Jetpack Compose, no XML
-- 🌙 **Dark mode** — follows system
 
 Read more on **[snaptask.org](https://snaptask.org)**.
 
