@@ -364,6 +364,50 @@
   .use-case h3 { color: #0066ff; font-size: 1.1rem; margin-bottom: 8px; }
   .use-case p { font-size: 0.95rem; margin: 0; }
 
+  /* Screenshot carousel */
+  .shots-wrap {
+    margin-top: 36px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding: 20px 4px 24px;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .shots {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+  }
+  .shot {
+    flex: 0 0 auto;
+    width: 240px;
+    scroll-snap-align: center;
+    text-align: center;
+  }
+  .shot img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+    border: 1px solid #e5e7eb;
+    background: #fff;
+  }
+  .shot-caption {
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: #475569;
+    font-weight: 500;
+  }
+  .shots-hint {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 4px;
+  }
   /* Sticky nav */
   nav.top-nav {
     position: sticky;
@@ -432,6 +476,7 @@
     <a href="#" class="brand">SnapTask</a>
     <ul>
       <li><a href="#how-it-works">How it works</a></li>
+      <li><a href="#screenshots">Screens</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#compare">Compare</a></li>
       <li><a href="#languages">Languages</a></li>
@@ -503,6 +548,35 @@
         loading="lazy"></iframe>
     </div>
     <p class="video-caption">29-second demo · 100% retention on YouTube Shorts</p>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="alt" id="screenshots">
+  <div class="container">
+    <h2>See it in action</h2>
+    <p>Real screens from the app — not mockups. Swipe to scroll.</p>
+    <div class="shots-wrap">
+      <div class="shots">
+        <div class="shot">
+          <img src="screenshots/screen2_notification.png" alt="SnapTask notification bar with inline reply input" loading="lazy" width="1080" height="2400">
+          <div class="shot-caption">Capture from the notification bar</div>
+        </div>
+        <div class="shot">
+          <img src="screenshots/screen1_inbox.png" alt="SnapTask inbox showing captured tasks" loading="lazy" width="1080" height="2400">
+          <div class="shot-caption">All your captures, one tidy inbox</div>
+        </div>
+        <div class="shot">
+          <img src="screenshots/screen3_scheduled.png" alt="SnapTask scheduled tasks tab with reminders" loading="lazy" width="1080" height="2400">
+          <div class="shot-caption">Natural-language reminders, scheduled</div>
+        </div>
+        <div class="shot">
+          <img src="screenshots/screen4_settings.png" alt="SnapTask settings: language, badges, license key" loading="lazy" width="1080" height="2400">
+          <div class="shot-caption">17 languages · clean settings</div>
+        </div>
+      </div>
+    </div>
+    <p class="shots-hint">← swipe →</p>
   </div>
 </section>
 
