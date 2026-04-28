@@ -288,7 +288,136 @@
     color: #475569;
   }
 
+  /* Comparison table */
+  .compare-wrap { overflow-x: auto; margin: 32px 0 8px; }
+  table.compare {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    min-width: 640px;
+  }
+  table.compare th, table.compare td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+  }
+  table.compare thead th {
+    background: #0a1929;
+    color: white;
+    font-weight: 600;
+  }
+  table.compare thead th.snaptask-col {
+    background: #0066ff;
+  }
+  table.compare tbody tr:last-child td { border-bottom: 0; }
+  table.compare td.feature-name { font-weight: 600; color: #0a1929; }
+  table.compare td.yes { color: #059669; font-weight: 700; }
+  table.compare td.no { color: #dc2626; }
+  table.compare td.snaptask-cell { background: #f0f6ff; font-weight: 600; }
+  .compare-note { font-size: 0.85rem; color: #64748b; text-align: center; margin-top: 6px; }
+
+  /* Language showcase */
+  .lang-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 30px;
+  }
+  .lang-card {
+    background: white;
+    padding: 18px 20px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.15s, border-color 0.15s;
+  }
+  .lang-card:hover { transform: translateY(-2px); border-color: #0066ff; }
+  .lang-card .flag { font-size: 1.5rem; margin-bottom: 6px; display: block; }
+  .lang-card .lang-name { font-weight: 700; color: #0a1929; font-size: 0.95rem; margin-bottom: 8px; }
+  .lang-card .example {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 0.85rem;
+    color: #475569;
+    background: #f7f9fc;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border-left: 3px solid #0066ff;
+  }
+
+  /* Use cases */
+  .use-cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 36px;
+  }
+  .use-case {
+    padding: 24px;
+    background: white;
+    border-radius: 10px;
+    border-top: 4px solid #0066ff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .use-case h3 { color: #0066ff; font-size: 1.1rem; margin-bottom: 8px; }
+  .use-case p { font-size: 0.95rem; margin: 0; }
+
+  /* Sticky nav */
+  nav.top-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 100;
+    padding: 12px 0;
+  }
+  nav.top-nav .nav-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  nav.top-nav .brand {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #0a1929;
+    text-decoration: none;
+  }
+  nav.top-nav ul {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav.top-nav ul a {
+    color: #475569;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+  nav.top-nav ul a:hover { color: #0066ff; }
+  nav.top-nav .nav-cta {
+    background: #0066ff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
   /* Responsive */
+  @media (max-width: 720px) {
+    nav.top-nav ul { display: none; }
+  }
   @media (max-width: 600px) {
     .cta-secondary { display: block; margin: 16px 0 0; }
     section { padding: 50px 0; }
@@ -296,6 +425,21 @@
 </style>
 </head>
 <body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">SnapTask</a>
+    <ul>
+      <li><a href="#how-it-works">How it works</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#compare">Compare</a></li>
+      <li><a href="#languages">Languages</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="https://ftgygh0.systeme.io/35988053" class="nav-cta" rel="noopener">Get Free</a>
+  </div>
+</nav>
 
 <!-- HERO -->
 <header class="hero">
@@ -363,7 +507,7 @@
 </section>
 
 <!-- FEATURES -->
-<section>
+<section id="features">
   <div class="container">
     <h2>Why people switch to SnapTask</h2>
     <div class="features">
@@ -396,8 +540,224 @@
   </div>
 </section>
 
+<!-- COMPARISON -->
+<section class="alt" id="compare">
+  <div class="container">
+    <h2>SnapTask vs. the alternatives</h2>
+    <p>How notification-bar capture stacks up against the popular Android task apps people are switching from.</p>
+    <div class="compare-wrap">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="snaptask-col">SnapTask</th>
+            <th>Google Keep</th>
+            <th>Todoist</th>
+            <th>TickTick</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="feature-name">Capture without opening app</td>
+            <td class="snaptask-cell yes">✓ Notification bar</td>
+            <td class="no">Widget only</td>
+            <td class="no">Widget only</td>
+            <td class="no">Widget only</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Taps to save a task</td>
+            <td class="snaptask-cell yes">2</td>
+            <td>4–5</td>
+            <td>4–6</td>
+            <td>4–6</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Natural-language dates</td>
+            <td class="snaptask-cell yes">✓ 17 languages</td>
+            <td class="no">No</td>
+            <td>English only</td>
+            <td>English only</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Works fully offline</td>
+            <td class="snaptask-cell yes">✓</td>
+            <td class="yes">✓</td>
+            <td class="no">Account required</td>
+            <td class="no">Account required</td>
+          </tr>
+          <tr>
+            <td class="feature-name">No account required</td>
+            <td class="snaptask-cell yes">✓</td>
+            <td class="no">Google account</td>
+            <td class="no">Account</td>
+            <td class="no">Account</td>
+          </tr>
+          <tr>
+            <td class="feature-name">No tracking / no ads</td>
+            <td class="snaptask-cell yes">✓</td>
+            <td class="no">Google tracking</td>
+            <td class="yes">✓</td>
+            <td class="no">Telemetry</td>
+          </tr>
+          <tr>
+            <td class="feature-name">App size</td>
+            <td class="snaptask-cell yes">&lt; 4 MB</td>
+            <td>~20 MB</td>
+            <td>~50 MB</td>
+            <td>~70 MB</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Free tier</td>
+            <td class="snaptask-cell yes">Full features</td>
+            <td class="yes">Full features</td>
+            <td>Limited</td>
+            <td>Limited</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Pro price</td>
+            <td class="snaptask-cell yes">$2/mo</td>
+            <td>—</td>
+            <td>$4/mo</td>
+            <td>$3/mo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-note">Comparison based on publicly available app information as of April 2026. SnapTask isn't trying to replace full project managers — it's the fastest path from thought to saved task.</p>
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section id="languages">
+  <div class="container">
+    <h2>Type in your language. SnapTask understands.</h2>
+    <p>The natural-language date parser works across 17 languages. Type the way you actually think — SnapTask schedules the reminder automatically.</p>
+    <div class="lang-grid">
+      <div class="lang-card">
+        <span class="flag">🇬🇧</span>
+        <div class="lang-name">English</div>
+        <div class="example">Call mom tomorrow at 3pm</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇫🇷</span>
+        <div class="lang-name">French</div>
+        <div class="example">Appeler maman demain à 15h</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇪🇸</span>
+        <div class="lang-name">Spanish</div>
+        <div class="example">Llamar a mamá mañana a las 3</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇸🇦</span>
+        <div class="lang-name">Arabic</div>
+        <div class="example" dir="rtl">اتصل بأمي غداً الساعة 3</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇩🇪</span>
+        <div class="lang-name">German</div>
+        <div class="example">Mama morgen um 15 Uhr anrufen</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇮🇹</span>
+        <div class="lang-name">Italian</div>
+        <div class="example">Chiamare mamma domani alle 15</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇵🇹</span>
+        <div class="lang-name">Portuguese</div>
+        <div class="example">Ligar para mãe amanhã às 15h</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇳🇱</span>
+        <div class="lang-name">Dutch</div>
+        <div class="example">Mama morgen om 15:00 bellen</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇷🇺</span>
+        <div class="lang-name">Russian</div>
+        <div class="example">Позвонить маме завтра в 15:00</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇨🇳</span>
+        <div class="lang-name">Chinese</div>
+        <div class="example">明天下午3点给妈妈打电话</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇯🇵</span>
+        <div class="lang-name">Japanese</div>
+        <div class="example">明日15時にママに電話</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇰🇷</span>
+        <div class="lang-name">Korean</div>
+        <div class="example">내일 오후 3시 엄마에게 전화</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇹🇷</span>
+        <div class="lang-name">Turkish</div>
+        <div class="example">Yarın saat 15'te annemi ara</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇵🇱</span>
+        <div class="lang-name">Polish</div>
+        <div class="example">Zadzwoń do mamy jutro o 15</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇸🇪</span>
+        <div class="lang-name">Swedish</div>
+        <div class="example">Ring mamma imorgon klockan 15</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇮🇳</span>
+        <div class="lang-name">Hindi</div>
+        <div class="example">कल दोपहर 3 बजे माँ को फ़ोन</div>
+      </div>
+      <div class="lang-card">
+        <span class="flag">🇮🇩</span>
+        <div class="lang-name">Indonesian</div>
+        <div class="example">Telepon ibu besok jam 3 sore</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="alt" id="use-cases">
+  <div class="container">
+    <h2>Built for thought-capture, not project management.</h2>
+    <p>SnapTask is for the moments between everything else — when you have an idea and three seconds before it disappears.</p>
+    <div class="use-cases">
+      <div class="use-case">
+        <h3>🚶 Walking the dog</h3>
+        <p>Remember to email the landlord. Pull down notification, type "Email landlord about heating", send. Without ever stopping.</p>
+      </div>
+      <div class="use-case">
+        <h3>🚌 On the bus</h3>
+        <p>"Buy bread on the way home" — saved in 2 seconds while you keep scrolling. No app context-switch.</p>
+      </div>
+      <div class="use-case">
+        <h3>💼 In a meeting</h3>
+        <p>"Follow up with Sarah next Tuesday at 10am" — typed under the table, scheduled with a reminder.</p>
+      </div>
+      <div class="use-case">
+        <h3>🛌 In bed at midnight</h3>
+        <p>That idea you'll definitely forget by morning? "Refactor login flow tomorrow" — captured before sleep.</p>
+      </div>
+      <div class="use-case">
+        <h3>🚗 At a red light</h3>
+        <p>"Pick up dry cleaning Friday" — handled at a glance, hands back on the wheel before green.</p>
+      </div>
+      <div class="use-case">
+        <h3>🍳 Cooking dinner</h3>
+        <p>"Add olive oil to grocery list" — voice-to-text into the notification while your hands are busy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
-<section class="alt">
+<section id="faq">
   <div class="container">
     <h2>Frequently asked questions</h2>
 
