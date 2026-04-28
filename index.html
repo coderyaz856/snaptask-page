@@ -422,6 +422,42 @@
     .cta-secondary { display: block; margin: 16px 0 0; }
     section { padding: 50px 0; }
   }
+
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    body { background: #0a0e1a; color: #e2e8f0; }
+    h2 { color: #f1f5f9; }
+    h3 { color: #f1f5f9; }
+    p { color: #cbd5e1; }
+    section.alt { background: #111827; }
+    nav.top-nav { background: rgba(10,14,26,0.92); border-bottom-color: #1f2937; }
+    nav.top-nav .brand { color: #f1f5f9; }
+    nav.top-nav ul a { color: #94a3b8; }
+    nav.top-nav ul a:hover { color: #60a5fa; }
+    .feature { background: #111827; border-color: #1f2937; }
+    .use-case { background: #111827; box-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+    .lang-card { background: #111827; border-color: #1f2937; }
+    .lang-card .lang-name { color: #f1f5f9; }
+    .lang-card .example { background: #0a0e1a; color: #cbd5e1; }
+    .lang-card:hover { border-color: #60a5fa; }
+    details { background: #111827; border-color: #1f2937; }
+    details summary { color: #f1f5f9; }
+    table.compare { background: #111827; box-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+    table.compare thead th { background: #000814; }
+    table.compare thead th.snaptask-col { background: #0066ff; }
+    table.compare th, table.compare td { border-bottom-color: #1f2937; }
+    table.compare td { color: #cbd5e1; }
+    table.compare td.feature-name { color: #f1f5f9; }
+    table.compare td.snaptask-cell { background: #0a1929; color: #f1f5f9; }
+    table.compare td.yes { color: #34d399; }
+    table.compare td.no { color: #f87171; }
+    .compare-note { color: #94a3b8; }
+    .problem-list li { color: #e2e8f0; }
+    .problem-list li:before { color: #f87171; }
+    .video-wrap { box-shadow: 0 12px 40px rgba(0,0,0,0.6); }
+    .step-num { background: #0066ff; }
+    /* Hero, final-cta, footer keep their dark gradients — already dark */
+  }
 </style>
 </head>
 <body>
