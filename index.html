@@ -160,6 +160,22 @@
     transition: transform 0.15s, box-shadow 0.15s;
   }
   .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+  .cta-button-alt {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    color: #ffffff;
+    padding: 18px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    margin-left: 10px;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .cta-button-alt:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.55); }
+  .final-cta .cta-button-alt { color: #1a1a1a; background: rgba(0,0,0,0.06); border-color: rgba(0,0,0,0.2); }
+  .final-cta .cta-button-alt:hover { background: rgba(0,0,0,0.1); }
   .cta-secondary {
     display: inline-block;
     margin-left: 12px;
@@ -464,6 +480,7 @@
   }
   @media (max-width: 600px) {
     .cta-secondary { display: block; margin: 16px 0 0; }
+    .cta-button-alt { display: inline-block; margin: 14px 0 0; }
     section { padding: 50px 0; }
   }
 </style>
@@ -492,6 +509,7 @@
     <h1>Capture Tasks Without Opening Any App</h1>
     <p class="subtitle">SnapTask lives in your Android notification bar. Tap it, type your thought, send. The fastest task capture ever built — no app launch, no friction, no forgotten ideas.</p>
     <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="cta-button" rel="noopener">Get SnapTask Free</a>
+    <a href="https://apkpure.com/p/com.snaptask.app" class="cta-button-alt" rel="noopener">↓ Also on APKPure</a>
     <a href="#how-it-works" class="cta-secondary">See how it works ↓</a>
     <div class="hero-meta">Free forever · Pro from $2/mo · No account required · Android 7.0+</div>
   </div>
@@ -867,7 +885,7 @@
 
     <details>
       <summary>Where can I download SnapTask?</summary>
-      <p>Get the free APK directly from <a href="https://ftgygh.gumroad.com/l/snaptask-pro" rel="noopener">Gumroad</a>. Google Play Store release is in closed testing — follow <a href="https://www.tiktok.com/@snaptask_app" rel="noopener">@snaptask_app on TikTok</a> for launch updates.</p>
+      <p>Get the free APK directly from <a href="https://ftgygh.gumroad.com/l/snaptask-pro" rel="noopener">Gumroad</a> or <a href="https://apkpure.com/p/com.snaptask.app" rel="noopener">APKPure</a>. Google Play Store release is in closed testing — follow <a href="https://www.tiktok.com/@snaptask_app" rel="noopener">@snaptask_app on TikTok</a> for launch updates.</p>
     </details>
 
   </div>
@@ -879,6 +897,7 @@
     <h2>Stop losing thoughts to friction.</h2>
     <p>Free forever. No account required. Install in 30 seconds.</p>
     <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="cta-button" rel="noopener">Get SnapTask Free</a>
+    <a href="https://apkpure.com/p/com.snaptask.app" class="cta-button-alt" rel="noopener">↓ Also on APKPure</a>
   </div>
 </section>
 
@@ -889,6 +908,7 @@
     <p style="margin-top:12px;">
       <a href="/privacy.html">Privacy Policy</a> ·
       <a href="https://ftgygh.gumroad.com/l/snaptask-pro">Gumroad</a> ·
+      <a href="https://apkpure.com/p/com.snaptask.app">APKPure</a> ·
       <a href="https://www.youtube.com/shorts/3c-OFit1xvg">Demo</a>
     </p>
     <div style="margin-top:20px; display:flex; justify-content:center;">
