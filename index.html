@@ -162,20 +162,21 @@
   .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
   .cta-button-alt {
     display: inline-block;
-    background: rgba(255,255,255,0.12);
+    background: #61cd5a;
     color: #ffffff;
     padding: 18px 28px;
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1rem;
     text-decoration: none;
-    border: 1.5px solid rgba(255,255,255,0.35);
+    border: 1.5px solid #4fb84a;
     margin-left: 10px;
-    transition: background 0.15s, border-color 0.15s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: background 0.15s, border-color 0.15s, transform 0.15s, box-shadow 0.15s;
   }
-  .cta-button-alt:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.55); }
-  .final-cta .cta-button-alt { color: #1a1a1a; background: rgba(0,0,0,0.06); border-color: rgba(0,0,0,0.2); }
-  .final-cta .cta-button-alt:hover { background: rgba(0,0,0,0.1); }
+  .cta-button-alt:hover { background: #4fb84a; border-color: #3fa83a; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+  .final-cta .cta-button-alt { color: #ffffff; background: #61cd5a; border-color: #4fb84a; }
+  .final-cta .cta-button-alt:hover { background: #4fb84a; border-color: #3fa83a; }
   .cta-secondary {
     display: inline-block;
     margin-left: 12px;
@@ -626,7 +627,7 @@
       <div class="feature">
         <div class="feature-icon">🔔</div>
         <h3>Natural reminders</h3>
-        <p>"In 2 hours", "next Monday", "domingo a las 9" — just write it. No date picker required.</p>
+        <p>"tomorrow", "+2d", "15 march", "15/03/2026" — just write it. No date picker required.</p>
       </div>
     </div>
   </div>
