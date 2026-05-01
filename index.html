@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Primary SEO -->
-<title>SnapTask — Capture Tasks From Your Notification Bar (Android)</title>
-<meta name="description" content="SnapTask is the fastest way to capture tasks on Android. Type directly in your notification bar — no app to open. UI in 17 languages with quick date shortcuts. Free download.">
-<meta name="keywords" content="notification bar task capture android, quick note from notification, android notification task app, notification widget todo, fastest task capture android, snaptask">
+<title>SnapTask - Add Notes From Your Android Notification Bar</title>
+<meta name="description" content="Add notes and tasks from your Android notification bar. SnapTask saves quick thoughts without opening an app. Free APK, no account, no ads, offline, 17-language UI.">
+<meta name="keywords" content="android notification bar notes, add notes from notification bar, quick note android notification, android task app notification bar, offline todo app android, snaptask">
 <meta name="author" content="Quordesk Labs">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://snaptask.org/">
@@ -15,15 +15,15 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://snaptask.org/">
-<meta property="og:title" content="SnapTask — Capture Tasks From Your Notification Bar">
-<meta property="og:description" content="The fastest task capture on Android. Type in your notification — done. UI in 17 languages, quick date shortcuts, no bloat.">
+<meta property="og:title" content="SnapTask - Add Notes From Your Android Notification Bar">
+<meta property="og:description" content="Pull down, type, send. SnapTask lets you add notes and tasks from your Android notification bar. Free APK, no account, no ads.">
 <meta property="og:image" content="https://snaptask.org/og-image.png">
 <meta property="og:site_name" content="SnapTask">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SnapTask — Notification-Bar Task Capture for Android">
-<meta name="twitter:description" content="Capture tasks without opening any app. Type directly in your notification bar. UI in 17 languages.">
+<meta name="twitter:title" content="SnapTask - Android Notification Bar Notes">
+<meta name="twitter:description" content="Add notes and tasks without opening an app. Type directly in your Android notification bar. Free APK, no account, no ads.">
 <meta name="twitter:image" content="https://snaptask.org/og-image.png">
 
 <!-- Favicon -->
@@ -37,9 +37,19 @@
   "name": "SnapTask",
   "operatingSystem": "Android 7.0+",
   "applicationCategory": "ProductivityApplication",
-  "description": "Capture tasks directly from your Android notification bar. No app to open. Date shortcuts and reminders without app switching.",
+  "description": "Add notes and tasks directly from your Android notification bar. No app to open. Free APK, no account, no ads, offline-first, with date shortcuts for reminders.",
   "url": "https://snaptask.org/",
   "downloadUrl": "https://ftgygh.gumroad.com/l/snaptask-pro",
+  "softwareVersion": "1.0.0",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "Add notes and tasks from the Android notification bar",
+    "Quick date shortcuts for reminders",
+    "Offline-first local storage",
+    "No account required",
+    "No ads",
+    "17-language user interface"
+  ],
   "author": {
     "@type": "Organization",
     "name": "Quordesk Labs"
@@ -69,10 +79,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How does notification bar task capture work?",
+      "name": "How do I add notes from the Android notification bar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SnapTask runs a persistent notification on your Android device. Tap it, type your task directly in the notification, and tap Send. The task is saved instantly without ever opening the app."
+        "text": "SnapTask runs a persistent notification on your Android device. Tap it, type your note or task directly in the notification, and tap Send. It is saved instantly without opening the app."
       }
     },
     {
@@ -80,7 +90,7 @@
       "name": "Is SnapTask free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The core notification capture, task list, tags, and basic reminders are 100% free forever. SnapTask Pro adds advanced reminders and customization for $2/month."
+        "text": "Yes. Saving notes from the notification bar, the task list, tags, and basic reminders are free. SnapTask Pro adds advanced reminders and customization for $2/month."
       }
     },
     {
@@ -106,6 +116,14 @@
         "@type": "Answer",
         "text": "Yes. SnapTask is fully offline-first. All data is stored locally on your device. No account required, no cloud sync, no tracking."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can't I find SnapTask on Google Play?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SnapTask is currently in Google Play closed testing. Until the public Play Store release, the free Android beta is available from Gumroad and APKPure."
+      }
     }
   ]
 }
@@ -126,19 +144,19 @@
   .hero {
     background: linear-gradient(135deg, #0066ff 0%, #0044cc 100%);
     color: white;
-    padding: 80px 0 100px;
+    padding: 44px 0 56px;
     text-align: center;
   }
   .hero h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
     line-height: 1.15;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     font-weight: 800;
   }
   .hero p.subtitle {
     font-size: clamp(1.1rem, 2vw, 1.35rem);
     max-width: 640px;
-    margin: 0 auto 40px;
+    margin: 0 auto 22px;
     opacity: 0.95;
   }
   .cta-button {
@@ -180,10 +198,76 @@
     font-weight: 500;
   }
   .hero-meta { margin-top: 24px; font-size: 0.9rem; opacity: 0.85; }
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
+  .hero-actions .cta-button-alt,
+  .hero-actions .cta-secondary { margin-left: 0; }
+  .hero-notice {
+    max-width: 620px;
+    margin: 22px auto 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.28);
+    color: rgba(255,255,255,0.96);
+    font-size: 0.95rem;
+  }
+  .hero-demo {
+    width: min(164px, 56vw);
+    aspect-ratio: 63 / 128;
+    margin: 0 auto;
+    padding: 6px;
+    border-radius: 24px;
+    background: #06101f;
+    box-shadow: 0 22px 56px rgba(0,0,0,0.34), 0 0 0 1px rgba(255,255,255,0.22);
+  }
+  .hero-demo video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 19px;
+    object-fit: cover;
+    background: #000;
+  }
 
   /* Sections */
   section { padding: 70px 0; }
   section.alt { background: #f7f9fc; }
+  .trust-strip {
+    padding: 22px 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .trust-item {
+    padding: 14px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #f8fafc;
+  }
+  .trust-item strong {
+    display: block;
+    color: #0a1929;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+  }
+  .trust-item span {
+    display: block;
+    color: #475569;
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
   h2 {
     font-size: clamp(1.6rem, 3vw, 2.25rem);
     margin-bottom: 16px;
@@ -291,7 +375,7 @@
     box-shadow: 0 12px 40px rgba(0,0,0,0.18);
     background: #000;
   }
-  .video-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .video-wrap video { width: 100%; height: 100%; border: 0; display: block; object-fit: cover; }
   .video-caption {
     text-align: center;
     margin-top: 20px;
@@ -467,15 +551,18 @@
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
+    white-space: nowrap;
   }
 
   /* Responsive */
-  @media (max-width: 720px) {
+  @media (max-width: 840px) {
     nav.top-nav ul { display: none; }
+    .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 600px) {
-    .cta-secondary { display: block; margin: 16px 0 0; }
-    .cta-button-alt { display: inline-block; margin: 14px 0 0; }
+    .cta-secondary { display: block; margin: 0; }
+    .cta-button-alt { display: inline-block; margin: 0; }
+    .hero-actions { flex-direction: column; }
     section { padding: 50px 0; }
   }
 </style>
@@ -494,21 +581,40 @@
       <li><a href="#languages">Languages</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="nav-cta" rel="noopener">Get Free</a>
+    <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="nav-cta" rel="noopener">Get APK</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
   <div class="container">
-    <h1>Capture Tasks Without Opening Any App</h1>
-    <p class="subtitle">SnapTask lives in your Android notification bar. Tap it, type your thought, send. The fastest task capture ever built — no app launch, no friction, no forgotten ideas.</p>
-    <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="cta-button" rel="noopener">Get SnapTask Free</a>
-    <a href="https://apkpure.com/p/com.snaptask.app" class="cta-button-alt" rel="noopener">↓ Also on APKPure</a>
-    <a href="#how-it-works" class="cta-secondary">See how it works ↓</a>
-    <div class="hero-meta">Free forever · Pro from $2/mo · No account required · Android 7.0+</div>
+    <h1>Add Notes Without Opening Any App</h1>
+    <p class="subtitle">SnapTask lives in your Android notification bar. Pull down, type a note or task, tap Send. It is the fastest way to save a thought on Android.</p>
+    <div class="hero-demo" aria-label="SnapTask notification bar demo">
+      <video autoplay muted loop playsinline preload="metadata" poster="screenshots/screen2_notification.png">
+        <source src="media/hero-notification-demo.mp4" type="video/mp4">
+        <img src="screenshots/screen2_notification.png" alt="SnapTask notification bar with inline note input" loading="eager" width="1080" height="2400">
+      </video>
+    </div>
+    <div class="hero-actions">
+      <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="cta-button" rel="noopener">Download Free APK</a>
+      <a href="https://apkpure.com/p/com.snaptask.app" class="cta-button-alt" rel="noopener">Get it on APKPure</a>
+      <a href="#how-it-works" class="cta-secondary">See how it works ↓</a>
+    </div>
+    <div class="hero-notice">Not public on Google Play yet. The free Android beta is available now from Gumroad and APKPure.</div>
+    <div class="hero-meta">No account · No ads · Works offline · Android 7.0+</div>
   </div>
 </header>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip" aria-label="SnapTask highlights">
+  <div class="container trust-grid">
+    <div class="trust-item"><strong>Free APK</strong><span>Install the Android beta today.</span></div>
+    <div class="trust-item"><strong>No account</strong><span>Open the app and start saving notes.</span></div>
+    <div class="trust-item"><strong>No ads</strong><span>A calm utility, not another feed.</span></div>
+    <div class="trust-item"><strong>Offline-first</strong><span>Your notes stay on your device.</span></div>
+  </div>
+</section>
 
 <!-- PROBLEM -->
 <section>
@@ -521,14 +627,14 @@
       <li>Voice notes pile up unsorted and forgotten.</li>
       <li>Sticky-note widgets clutter your home screen.</li>
     </ul>
-    <p>SnapTask solves this by living where you already are — your notification bar.</p>
+    <p>SnapTask fixes this by putting a simple input exactly where you already look — your notification bar.</p>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
 <section class="alt" id="how-it-works">
   <div class="container">
-    <h2>How notification-bar task capture works</h2>
+    <h2>How adding notes from the notification bar works</h2>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
@@ -541,7 +647,7 @@
         <div class="step-num">2</div>
         <div>
           <h3>Tap the input field and type</h3>
-          <p>"Buy milk tomorrow", "Submit form +2d", "Pay rent 15/03/2026" — just write naturally.</p>
+          <p>"Buy milk tomorrow", "Submit form +2d", "Pay rent 15/03/2026" — write the note and add a supported date shortcut when you need one.</p>
         </div>
       </div>
       <div class="step">
@@ -553,14 +659,12 @@
       </div>
     </div>
     <div class="video-wrap">
-      <iframe
-        src="https://www.youtube.com/embed/3c-OFit1xvg?rel=0&modestbranding=1&playsinline=1"
-        title="SnapTask demo — notification bar task capture"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        loading="lazy"></iframe>
+      <video controls playsinline preload="metadata" poster="screenshots/screen2_notification.png" aria-label="SnapTask demo - add notes from the notification bar">
+        <source src="media/hero-notification-demo.mp4" type="video/mp4">
+        <img src="screenshots/screen2_notification.png" alt="SnapTask notification bar with inline note input" loading="lazy" width="1080" height="2400">
+      </video>
     </div>
-    <p class="video-caption">29-second demo · 100% retention on YouTube Shorts</p>
+    <p class="video-caption">29-second demo of the Android notification input</p>
   </div>
 </section>
 
@@ -573,11 +677,11 @@
       <div class="shots">
         <div class="shot">
           <img src="screenshots/screen2_notification.png" alt="SnapTask notification bar with inline reply input" loading="lazy" width="1080" height="2400">
-          <div class="shot-caption">Capture from the notification bar</div>
+          <div class="shot-caption">Add from the notification bar</div>
         </div>
         <div class="shot">
-          <img src="screenshots/screen1_inbox.png" alt="SnapTask inbox showing captured tasks" loading="lazy" width="1080" height="2400">
-          <div class="shot-caption">All your captures, one tidy inbox</div>
+          <img src="screenshots/screen1_inbox.png" alt="SnapTask inbox showing saved notes and tasks" loading="lazy" width="1080" height="2400">
+          <div class="shot-caption">Notes and tasks in one tidy inbox</div>
         </div>
         <div class="shot">
           <img src="screenshots/screen3_scheduled.png" alt="SnapTask scheduled tasks tab with reminders" loading="lazy" width="1080" height="2400">
@@ -600,13 +704,13 @@
     <div class="features">
       <div class="feature">
         <div class="feature-icon">⚡</div>
-        <h3>2-second capture</h3>
-        <p>From thought to saved task in under two seconds. No other Android app comes close.</p>
+        <h3>Save in seconds</h3>
+        <p>From thought to saved note in a couple of taps. No app launch, no loading screen, no clutter.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">🌍</div>
         <h3>17-language UI</h3>
-        <p>Type "tomorrow", "+2d", or "15/03/2026" — SnapTask understands supported date shortcuts and keeps the capture fast.</p>
+        <p>The app UI is available in 17 languages. Supported date shortcuts like "tomorrow", "+2d", and "15/03/2026" keep saving fast.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">🔒</div>
@@ -631,7 +735,7 @@
 <section class="alt" id="compare">
   <div class="container">
     <h2>SnapTask vs. the alternatives</h2>
-    <p>How notification-bar capture stacks up against the popular Android task apps people are switching from.</p>
+    <p>How adding from the notification bar stacks up against the popular Android task apps people are switching from.</p>
     <div class="compare-wrap">
       <table class="compare">
         <thead>
@@ -645,7 +749,7 @@
         </thead>
         <tbody>
           <tr>
-            <td class="feature-name">Capture without opening app</td>
+            <td class="feature-name">Add without opening app</td>
             <td class="snaptask-cell yes">✓ Notification bar</td>
             <td class="no">Widget only</td>
             <td class="no">Widget only</td>
@@ -718,7 +822,7 @@
 <section id="languages">
   <div class="container">
     <h2>Use SnapTask in your language.</h2>
-    <p>SnapTask supports quick date capture across common formats and multilingual UI. Type a supported shortcut and keep moving.</p>
+    <p>SnapTask supports quick date entry across common formats and a multilingual UI. Type a supported shortcut and keep moving.</p>
     <div class="lang-grid">
       <div class="lang-card">
         <span class="flag">🇬🇧</span>
@@ -812,7 +916,7 @@
 <!-- USE CASES -->
 <section class="alt" id="use-cases">
   <div class="container">
-    <h2>Built for thought-capture, not project management.</h2>
+    <h2>Built for quick notes, not project management.</h2>
     <p>SnapTask is for the moments between everything else — when you have an idea and three seconds before it disappears.</p>
     <div class="use-cases">
       <div class="use-case">
@@ -829,7 +933,7 @@
       </div>
       <div class="use-case">
         <h3>🛌 In bed at midnight</h3>
-        <p>That idea you'll definitely forget by morning? "Refactor login flow tomorrow" — captured before sleep.</p>
+        <p>That idea you'll definitely forget by morning? "Refactor login flow tomorrow" — saved before sleep.</p>
       </div>
       <div class="use-case">
         <h3>🚗 At a red light</h3>
@@ -849,13 +953,13 @@
     <h2>Frequently asked questions</h2>
 
     <details>
-      <summary>How does notification-bar task capture work on Android?</summary>
-      <p>SnapTask keeps a persistent notification with an inline input field visible at all times. You type directly into the notification — no app launch — and your task is saved instantly. The notification is the app's primary UI.</p>
+      <summary>How do I add notes from the Android notification bar?</summary>
+      <p>SnapTask keeps a persistent notification with an inline input field visible at all times. You type directly into the notification — no app launch — and your note or task is saved instantly. The notification is the app's primary UI.</p>
     </details>
 
     <details>
       <summary>Is SnapTask free?</summary>
-      <p>Yes. Core capture, task list, tags, and basic reminders are 100% free forever. SnapTask Pro ($2/month) unlocks advanced reminders, custom badges, and priority feature requests.</p>
+      <p>Yes. Saving notes from the notification bar, the task list, tags, and basic reminders are free. SnapTask Pro ($2/month) unlocks advanced reminders, custom badges, and priority feature requests.</p>
     </details>
 
     <details>
@@ -875,12 +979,17 @@
 
     <details>
       <summary>How is SnapTask different from Google Keep or Todoist?</summary>
-      <p>Google Keep and Todoist require you to open the app every time. SnapTask's notification-bar capture is 4–6× faster for the most common use case: jotting a quick task. SnapTask focuses exclusively on capture speed; it's not trying to replace your full project manager.</p>
+      <p>Google Keep and Todoist require you to open the app every time. SnapTask's notification-bar input is faster for the most common use case: jotting a quick note or task. SnapTask focuses on saving thoughts quickly; it is not trying to replace your full project manager.</p>
     </details>
 
     <details>
       <summary>Where can I download SnapTask?</summary>
-      <p>Get the free APK directly from <a href="https://ftgygh.gumroad.com/l/snaptask-pro" rel="noopener">Gumroad</a> or <a href="https://apkpure.com/p/com.snaptask.app" rel="noopener">APKPure</a>. Google Play Store release is in closed testing — follow <a href="https://www.tiktok.com/@snaptask_app" rel="noopener">@snaptask_app on TikTok</a> for launch updates.</p>
+      <p>Get the free APK directly from <a href="https://ftgygh.gumroad.com/l/snaptask-pro" rel="noopener">Gumroad</a> or <a href="https://apkpure.com/p/com.snaptask.app" rel="noopener">APKPure</a>. SnapTask is not public on Google Play yet because the Play Store release is still in closed testing — follow <a href="https://www.tiktok.com/@snaptask_app" rel="noopener">@snaptask_app on TikTok</a> for launch updates.</p>
+    </details>
+
+    <details>
+      <summary>Why can't I find SnapTask on Google Play?</summary>
+      <p>SnapTask is currently in Google Play closed testing. Until the public Play Store release, you can install the free Android beta from Gumroad or APKPure.</p>
     </details>
 
   </div>
@@ -889,10 +998,10 @@
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="container">
-    <h2>Stop losing thoughts to friction.</h2>
-    <p>Free forever. No account required. Install in 30 seconds.</p>
-    <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="cta-button" rel="noopener">Get SnapTask Free</a>
-    <a href="https://apkpure.com/p/com.snaptask.app" class="cta-button-alt" rel="noopener">↓ Also on APKPure</a>
+    <h2>Add the thought before it disappears.</h2>
+    <p>Free Android beta. No account required. No ads. Google Play release is still in closed testing.</p>
+    <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="cta-button" rel="noopener">Download Free APK</a>
+    <a href="https://apkpure.com/p/com.snaptask.app" class="cta-button-alt" rel="noopener">Get it on APKPure</a>
   </div>
 </section>
 
