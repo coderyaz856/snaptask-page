@@ -129,6 +129,22 @@
 }
 </script>
 
+<!-- JSON-LD: Organization (AEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Quordesk Labs",
+  "url": "https://snaptask.org/",
+  "logo": "https://snaptask.org/favicon.png",
+  "sameAs": [
+    "https://www.tiktok.com/@snaptask_app",
+    "https://apkpure.com/p/com.snaptask.app",
+    "https://ftgygh.gumroad.com/l/snaptask-pro"
+  ]
+}
+</script>
+
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -565,6 +581,13 @@
     .hero-actions { flex-direction: column; }
     section { padding: 50px 0; }
   }
+
+  /* Quick Answer (AEO) */
+  .quick-answer { background: #f0f6ff; padding: 28px 0; border-top: 3px solid #0066ff; border-bottom: 1px solid #dbeafe; }
+  .qa-block { border-left: 4px solid #0066ff; padding: 18px 22px; background: white; border-radius: 0 8px 8px 0; max-width: 760px; box-shadow: 0 1px 3px rgba(0,102,255,0.06); }
+  .qa-label { font-size: 0.75rem; font-weight: 700; color: #0066ff; text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 10px; }
+  .qa-block p { margin-bottom: 8px; color: #1a1a1a; }
+  .qa-block p:last-child { margin-bottom: 0; }
 </style>
 </head>
 <body>
@@ -580,6 +603,7 @@
       <li><a href="#compare">Compare</a></li>
       <li><a href="#languages">Languages</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="/blog/">Blog</a></li>
     </ul>
     <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="nav-cta" rel="noopener">Get APK</a>
   </div>
@@ -616,10 +640,21 @@
   </div>
 </section>
 
+<!-- QUICK ANSWER (AEO) -->
+<section class="quick-answer" aria-label="Quick answer: how to add notes from Android notification bar">
+  <div class="container">
+    <div class="qa-block">
+      <div class="qa-label">Quick Answer</div>
+      <p><strong>How do you add notes from the Android notification bar without opening any app?</strong></p>
+      <p>Install SnapTask on Android. It adds a permanent input field to your notification bar. Pull down the shade, type your note or task, tap Send — saved in under 2 seconds. No app to open, no account, no ads. Works offline on Android 7.0 and above. Free APK available on Gumroad and APKPure.</p>
+    </div>
+  </div>
+</section>
+
 <!-- PROBLEM -->
 <section>
   <div class="container">
-    <h2>Every task app has the same problem.</h2>
+    <h2>Why do you keep forgetting tasks on Android?</h2>
     <p>You have an idea. You unlock your phone, find the app, wait for it to load, tap "+", type, save. By the time you're done, the thought is half-formed — or gone.</p>
     <ul class="problem-list">
       <li>Opening Todoist, Google Keep, or Notion takes 4–8 taps.</li>
@@ -700,7 +735,7 @@
 <!-- FEATURES -->
 <section id="features">
   <div class="container">
-    <h2>Why people switch to SnapTask</h2>
+    <h2>What makes SnapTask different from Google Keep and Todoist?</h2>
     <div class="features">
       <div class="feature">
         <div class="feature-icon">⚡</div>
@@ -821,7 +856,7 @@
 <!-- LANGUAGES -->
 <section id="languages">
   <div class="container">
-    <h2>Use SnapTask in your language.</h2>
+    <h2>Which languages does SnapTask support?</h2>
     <p>SnapTask supports quick date entry across common formats and a multilingual UI. Type a supported shortcut and keep moving.</p>
     <div class="lang-grid">
       <div class="lang-card">
@@ -916,7 +951,7 @@
 <!-- USE CASES -->
 <section class="alt" id="use-cases">
   <div class="container">
-    <h2>Built for quick notes, not project management.</h2>
+    <h2>Who is SnapTask built for?</h2>
     <p>SnapTask is for the moments between everything else — when you have an idea and three seconds before it disappears.</p>
     <div class="use-cases">
       <div class="use-case">
@@ -1010,6 +1045,7 @@
   <div class="container">
     <p>© 2026 Quordesk Labs · Built in Morocco</p>
     <p style="margin-top:12px;">
+      <a href="/blog/">Blog</a> ·
       <a href="/privacy.html">Privacy Policy</a> ·
       <a href="https://ftgygh.gumroad.com/l/snaptask-pro">Gumroad</a> ·
       <a href="https://apkpure.com/p/com.snaptask.app">APKPure</a> ·

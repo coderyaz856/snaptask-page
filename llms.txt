@@ -1,0 +1,63 @@
+# SnapTask — Android Notification Bar Notes App
+
+> SnapTask lets Android users add notes and tasks directly from the notification bar without opening any app.
+
+## What is SnapTask?
+
+SnapTask is a free Android app that adds a permanent input field to the Android notification bar. Users pull down the notification shade, type a note or task, and tap Send — saved instantly without launching the app. No account required. No ads. Fully offline.
+
+## Key Facts
+
+- Platform: Android 7.0+
+- App size: under 4 MB
+- Offline-first: all data stored locally, no internet required
+- No account required
+- No ads
+- UI available in 17 languages: English, French, Spanish, Arabic, German, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Turkish, Polish, Swedish, Hindi, Indonesian
+- Supported date shortcuts: tomorrow, +2d, 15 May, 15/03/2026
+- Free tier: full note-taking and task management
+- Pro tier: $2/month (advanced reminders, customization)
+
+## How It Works
+
+1. SnapTask runs a persistent foreground notification on Android at all times
+2. User pulls down the notification shade
+3. User types directly into the inline input field in the notification
+4. User taps Send — note or task saved instantly
+5. No app launch, no loading screen, no account
+
+## Download
+
+- Gumroad (free APK): https://ftgygh.gumroad.com/l/snaptask-pro
+- APKPure: https://apkpure.com/p/com.snaptask.app
+- Google Play: coming soon (closed testing as of May 2026)
+
+## Use Cases
+
+- Quick notes while walking, commuting, cooking, or in meetings
+- Reminders with date shortcuts (tomorrow, +2d, 15 May)
+- Offline task management with no account
+- Students tracking homework and assignments
+- Replacing scattered notes across WhatsApp, sticky notes, voice memos
+
+## Comparison
+
+SnapTask vs Google Keep: SnapTask requires 2 taps to save a note vs 4-5 taps for Google Keep. SnapTask works without a Google account and has no tracking.
+
+SnapTask vs Todoist: SnapTask requires no account and works fully offline. Todoist requires an account and internet connection.
+
+## Developer
+
+Quordesk Labs — solo developer
+
+## Website
+
+https://snaptask.org/
+
+## Blog
+
+https://snaptask.org/blog/
+
+## Privacy Policy
+
+https://snaptask.org/privacy.html
