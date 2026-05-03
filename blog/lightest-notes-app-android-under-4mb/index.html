@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lightest Notes App for Android: Under 4 MB, No Bloat, No Ads (2026) | SnapTask</title>
+<meta name="description" content="Looking for a tiny Android notes app that does not eat your storage or battery? SnapTask is under 4 MB with no ads, no tracking, no background polling. Free APK.">
+<link rel="canonical" href="https://snaptask.org/blog/lightest-notes-app-android-under-4mb/">
+<meta property="og:title" content="Lightest Notes App for Android: Under 4 MB and No Bloat">
+<meta property="og:description" content="A truly tiny Android notes app. Under 4 MB. No ads. No tracking. No background polling. Free APK.">
+<meta property="og:url" content="https://snaptask.org/blog/lightest-notes-app-android-under-4mb/">
+<meta property="og:type" content="article">
+<link rel="icon" type="image/png" href="/favicon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Lightest Notes App for Android: Under 4 MB, No Bloat, No Ads",
+  "description": "Why most Android notes apps are dozens of megabytes, what causes the bloat, and how SnapTask stays under 4 MB while shipping notification-bar capture and a system share target.",
+  "url": "https://snaptask.org/blog/lightest-notes-app-android-under-4mb/",
+  "datePublished": "2026-05-03",
+  "dateModified": "2026-05-03",
+  "author": { "@type": "Organization", "name": "Quordesk Labs", "url": "https://snaptask.org/" },
+  "publisher": { "@type": "Organization", "name": "Quordesk Labs", "url": "https://snaptask.org/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the lightest notes app for Android?",
+      "acceptedAnswer": { "@type": "Answer", "text": "SnapTask is under 4 MB installed, which makes it one of the smallest functional notes apps for Android. By comparison, Google Keep is around 20 MB, Todoist around 50 MB, and TickTick around 70 MB." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are most Android notes apps so large?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cloud sync libraries, account systems, advertising SDKs, analytics SDKs, third-party UI libraries, and unused images bloat most apps. SnapTask ships none of that, which is how it stays under 4 MB." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a smaller notes app use less battery?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Usually yes. Apps without background sync, no telemetry pings, and no ad refreshes have very low battery impact. SnapTask measures under 1% battery per day in real usage." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SnapTask have ads?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. SnapTask has no advertising SDK, no banner ads, no interstitial ads, and no sponsored entries. The free version is genuinely free; the optional Pro tier is $2/month via Gumroad." }
+    }
+  ]
+}
+</script>
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.7; color: #1a1a1a; background: #fff; }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  nav.top-nav { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e7eb; z-index: 100; padding: 12px 0; }
+  nav.top-nav .nav-inner { max-width: 960px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  nav.top-nav .brand { font-weight: 800; font-size: 1.1rem; color: #0a1929; text-decoration: none; }
+  nav.top-nav ul { display: flex; gap: 22px; list-style: none; }
+  nav.top-nav ul a { color: #475569; text-decoration: none; font-size: 0.92rem; font-weight: 500; }
+  nav.top-nav ul a:hover { color: #0066ff; }
+  nav.top-nav .nav-cta { background: #0066ff; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+  @media (max-width: 640px) { nav.top-nav ul { display: none; } }
+  .article-header { padding: 52px 0 36px; border-bottom: 1px solid #e5e7eb; }
+  .article-tag { display: inline-block; background: #eff6ff; color: #0066ff; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 99px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .article-header h1 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); line-height: 1.2; color: #0a1929; margin-bottom: 14px; font-weight: 800; }
+  .article-meta { font-size: 0.85rem; color: #64748b; }
+  .qa-block { border-left: 4px solid #0066ff; padding: 18px 22px; background: #f0f6ff; border-radius: 0 8px 8px 0; margin: 32px 0; }
+  .qa-label { font-size: 0.75rem; font-weight: 700; color: #0066ff; text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 8px; }
+  .qa-block p { margin-bottom: 8px; color: #1a1a1a; }
+  .qa-block p:last-child { margin-bottom: 0; }
+  article { padding: 36px 0 56px; }
+  article h2 { font-size: 1.35rem; color: #0a1929; margin: 36px 0 12px; font-weight: 700; }
+  article h3 { font-size: 1.1rem; color: #0a1929; margin: 24px 0 8px; font-weight: 600; }
+  article p { margin-bottom: 18px; color: #2a2a2a; }
+  article ul, article ol { margin: 0 0 18px 24px; }
+  article li { margin-bottom: 6px; color: #2a2a2a; }
+  article table { width: 100%; border-collapse: collapse; margin: 18px 0 24px; font-size: 0.93rem; }
+  article th, article td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+  article th { background: #f7f9fc; font-weight: 700; color: #0a1929; }
+  .cta-box { background: linear-gradient(135deg, #0066ff 0%, #0044cc 100%); color: white; padding: 32px; border-radius: 12px; text-align: center; margin: 40px 0; }
+  .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 10px; }
+  .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 20px; font-size: 0.97rem; }
+  .cta-btn { display: inline-block; background: #ffd60a; color: #1a1a1a; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+  .faq-section { border-top: 1px solid #e5e7eb; padding-top: 36px; margin-top: 8px; }
+  details { border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: #fafafa; }
+  details summary { font-weight: 600; cursor: pointer; color: #0a1929; }
+  details[open] summary { margin-bottom: 10px; }
+  details p { margin: 0; font-size: 0.97rem; }
+  .breadcrumb { padding: 14px 0; font-size: 0.85rem; color: #64748b; }
+  .breadcrumb a { color: #0066ff; text-decoration: none; }
+  .related { margin-top: 40px; padding-top: 28px; border-top: 1px solid #e5e7eb; }
+  .related h2 { font-size: 1.2rem; margin-bottom: 14px; }
+  .related ul { list-style: none; margin: 0; padding: 0; }
+  .related li { margin-bottom: 10px; padding-left: 0; }
+  .related a { color: #0066ff; text-decoration: none; font-weight: 500; }
+  .related a:hover { text-decoration: underline; }
+  footer { background: #0a1929; color: #cbd5e1; padding: 32px 0; text-align: center; font-size: 0.9rem; }
+  footer a { color: #93c5fd; text-decoration: none; margin: 0 10px; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-inner">
+    <a href="/" class="brand">SnapTask</a>
+    <ul>
+      <li><a href="/#how-it-works">How it works</a></li>
+      <li><a href="/#features">Features</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+    <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="nav-cta" rel="noopener">Get APK</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Lightest notes app under 4 MB</div>
+</div>
+
+<div class="container">
+  <div class="article-header">
+    <span class="article-tag">Comparison</span>
+    <h1>Lightest Notes App for Android: Under 4 MB, No Bloat, No Ads</h1>
+    <div class="article-meta">May 3, 2026 &middot; Quordesk Labs &middot; 4 min read</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="qa-block">
+    <div class="qa-label">Quick Answer</div>
+    <p><strong>What is the lightest notes app for Android?</strong></p>
+    <p>SnapTask is under 4 MB installed, which makes it one of the smallest functional notes apps for Android. Most popular notes apps are 20&ndash;120 MB. SnapTask stays small because it ships no analytics SDK, no advertising SDK, no cloud sync library, and no third-party UI framework. Free APK on Gumroad and APKPure, no account required, works offline.</p>
+  </div>
+</div>
+
+<div class="container">
+<article>
+
+<h2>Why are most Android notes apps so large?</h2>
+
+<p>An Android app's install size is mostly determined by the libraries it bundles. A typical notes app pulls in:</p>
+
+<ul>
+  <li>A cloud sync SDK (Firebase, AWS Amplify, custom) &mdash; 5&ndash;15 MB</li>
+  <li>An account / authentication library &mdash; 1&ndash;3 MB</li>
+  <li>Google Analytics or Firebase Analytics &mdash; 1&ndash;2 MB</li>
+  <li>Crashlytics or Sentry &mdash; 1&ndash;2 MB</li>
+  <li>Advertising SDKs (AdMob, Meta Audience) &mdash; 3&ndash;8 MB</li>
+  <li>A heavy UI toolkit or rich text editor &mdash; 5&ndash;20 MB</li>
+  <li>Unoptimized images and unused locale files</li>
+</ul>
+
+<p>That is how an app whose actual job is "save text and show it back" ends up at 50&ndash;100 MB.</p>
+
+<h2>How does SnapTask stay under 4 MB?</h2>
+
+<p>By not shipping the bloat:</p>
+
+<ul>
+  <li><strong>No cloud sync.</strong> Local SQLite via Room. No sync server, no SDK.</li>
+  <li><strong>No account system.</strong> Optional Pro is unlocked with a Gumroad license key &mdash; one HTTPS call, no auth library.</li>
+  <li><strong>No analytics or crash reporting.</strong> Zero telemetry SDKs.</li>
+  <li><strong>No ads.</strong> No advertising SDK at all.</li>
+  <li><strong>Jetpack Compose UI</strong> (built into Android), not a third-party framework.</li>
+  <li><strong>R8 minification + resource shrinking</strong> on release builds.</li>
+  <li><strong>17 languages stored as Kotlin maps</strong>, not as bloated XML resources.</li>
+</ul>
+
+<h2>How does SnapTask compare on size to other notes apps?</h2>
+
+<table>
+  <thead>
+    <tr><th>App</th><th>Approx install size</th><th>Has ads?</th><th>Has tracking?</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>SnapTask</td><td>&lt; 4 MB</td><td>No</td><td>No</td></tr>
+    <tr><td>Markor</td><td>~6 MB</td><td>No</td><td>No</td></tr>
+    <tr><td>Google Keep</td><td>~20 MB</td><td>No</td><td>Google</td></tr>
+    <tr><td>ColorNote</td><td>~12 MB</td><td>Yes</td><td>Yes</td></tr>
+    <tr><td>Todoist</td><td>~50 MB</td><td>Limited</td><td>Yes</td></tr>
+    <tr><td>TickTick</td><td>~70 MB</td><td>Yes (free)</td><td>Yes</td></tr>
+    <tr><td>OneNote</td><td>~80 MB</td><td>No</td><td>Microsoft</td></tr>
+    <tr><td>Notion</td><td>~120 MB</td><td>No</td><td>Yes</td></tr>
+  </tbody>
+</table>
+
+<h2>Does a smaller app actually mean better battery?</h2>
+
+<p>Usually yes. Battery drain comes from:</p>
+<ul>
+  <li>Background sync (cloud apps poll or maintain push connections)</li>
+  <li>Telemetry pings (analytics SDKs phone home periodically)</li>
+  <li>Ad refresh cycles (banner ads request a new ad every minute)</li>
+  <li>Wake locks (some apps keep the CPU awake longer than needed)</li>
+</ul>
+
+<p>SnapTask does none of those. The persistent foreground notification it uses is a passive UI element &mdash; it does not poll, does not run network calls, does not maintain a wake lock. Real-world battery impact is under 1% per day on a typical phone.</p>
+
+<h2>What features does SnapTask actually have at &lt;4 MB?</h2>
+
+<ul>
+  <li>Notification-bar input for adding notes without opening the app</li>
+  <li>System share target for saving text from any Android app</li>
+  <li>Task list with three tabs (inbox / scheduled / done)</li>
+  <li>Tags and swipe-to-archive</li>
+  <li>Date shortcuts (tomorrow, +2d, 15 May, 15/03/2026)</li>
+  <li>Local reminders with exact-alarm fallback</li>
+  <li>Markdown export and backup/restore</li>
+  <li>17-language UI</li>
+  <li>Light and dark themes</li>
+</ul>
+
+<p>Every feature is local. No server, no sync, no account.</p>
+
+<div class="cta-box">
+  <h3>Less than 4 MB. Less than 1% daily battery.</h3>
+  <p>Free APK. No account. No ads. No tracking. Android 7.0 and above.</p>
+  <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="cta-btn" rel="noopener">Download Free APK</a>
+</div>
+
+<div class="faq-section">
+  <h2>Frequently asked questions</h2>
+
+  <details>
+    <summary>What is the lightest notes app for Android?</summary>
+    <p>SnapTask at under 4 MB. Markor at around 6 MB is the next closest in the offline-first category.</p>
+  </details>
+
+  <details>
+    <summary>Are there notes apps without ads on Android?</summary>
+    <p>Yes. SnapTask, Markor, Google Keep, OneNote, and Apple Notes are all ad-free. SnapTask is the only one of those that is also under 4 MB and account-free.</p>
+  </details>
+
+  <details>
+    <summary>Does SnapTask run a background service?</summary>
+    <p>It runs a foreground notification, which Android requires for the persistent notification bar input. It does not poll, sync, or run any network calls in the background.</p>
+  </details>
+
+  <details>
+    <summary>Will SnapTask drain my battery?</summary>
+    <p>No. The notification is a passive UI element. Real-world battery impact is under 1% per day on a typical phone.</p>
+  </details>
+</div>
+
+<div class="related">
+  <h2>Related articles</h2>
+  <ul>
+    <li><a href="/blog/best-offline-notes-app-android-no-account/">Best offline notes app for Android with no account</a></li>
+    <li><a href="/blog/google-keep-alternative-android-no-account/">Best Google Keep alternative with no account required</a></li>
+    <li><a href="/blog/android-notification-bar-notes-app/">How to add notes from the Android notification bar</a></li>
+    <li><a href="/blog/share-text-from-any-app-android-notes/">How to share text from any Android app to a notes app</a></li>
+  </ul>
+</div>
+
+</article>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Quordesk Labs &middot; Built in Morocco</p>
+    <p style="margin-top:10px;">
+      <a href="/">Home</a> &middot;
+      <a href="/blog/">Blog</a> &middot;
+      <a href="/privacy.html">Privacy Policy</a> &middot;
+      <a href="https://ftgygh.gumroad.com/l/snaptask-pro">Download APK</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
