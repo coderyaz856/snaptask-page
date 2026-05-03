@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Notes App for ADHD on Android: Capture Thoughts Before They Disappear | SnapTask</title>
+<meta name="description" content="If you have ADHD, opening a notes app is too many steps. SnapTask adds notes from the Android notification bar in 3 taps — no account, no overwhelm, no premium gates.">
+<link rel="canonical" href="https://snaptask.org/blog/best-notes-app-adhd-android/">
+<meta property="og:title" content="Best Notes App for ADHD on Android">
+<meta property="og:description" content="A simple Android notes app for ADHD brains: notification bar input, no account, no friction. Free APK.">
+<meta property="og:url" content="https://snaptask.org/blog/best-notes-app-adhd-android/">
+<meta property="og:type" content="article">
+<link rel="icon" type="image/png" href="/favicon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Best Notes App for ADHD on Android: Capture Thoughts Before They Disappear",
+  "description": "An honest look at why typical notes apps fail ADHD brains and how a notification-bar-first workflow reduces capture friction to 3 taps.",
+  "url": "https://snaptask.org/blog/best-notes-app-adhd-android/",
+  "datePublished": "2026-05-03",
+  "dateModified": "2026-05-03",
+  "author": { "@type": "Organization", "name": "Quordesk Labs", "url": "https://snaptask.org/" },
+  "publisher": { "@type": "Organization", "name": "Quordesk Labs", "url": "https://snaptask.org/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best notes app for ADHD on Android?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SnapTask is built around the ADHD problem of losing thoughts in the seconds between thinking and writing. It adds an input field to the notification bar so capture takes 3 taps and 3 seconds. No account, fully offline, no premium upsell."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do most notes apps fail for ADHD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most apps require unlocking the phone, finding the icon, opening the app, waiting for it to load, tapping compose, and only then typing. By that point the thought is often gone or replaced. ADHD brains lose ideas in the friction, not because they did not care."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is SnapTask designed specifically for ADHD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SnapTask is not a clinical tool, but its core design — capture in under 3 seconds with no decisions to make — happens to fit ADHD capture friction very well. Many of the early users describe themselves as ADHD."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SnapTask have reminders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Reminders are free in SnapTask. Type a date shortcut at the end of your task — for example tomorrow, +2d, or 15 May — and SnapTask will remind you on that day."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.7; color: #1a1a1a; background: #fff; }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  nav.top-nav { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e7eb; z-index: 100; padding: 12px 0; }
+  nav.top-nav .nav-inner { max-width: 960px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  nav.top-nav .brand { font-weight: 800; font-size: 1.1rem; color: #0a1929; text-decoration: none; }
+  nav.top-nav ul { display: flex; gap: 22px; list-style: none; }
+  nav.top-nav ul a { color: #475569; text-decoration: none; font-size: 0.92rem; font-weight: 500; }
+  nav.top-nav ul a:hover { color: #0066ff; }
+  nav.top-nav .nav-cta { background: #0066ff; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+  @media (max-width: 640px) { nav.top-nav ul { display: none; } }
+  .article-header { padding: 52px 0 36px; border-bottom: 1px solid #e5e7eb; }
+  .article-tag { display: inline-block; background: #eff6ff; color: #0066ff; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 99px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .article-header h1 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); line-height: 1.2; color: #0a1929; margin-bottom: 14px; font-weight: 800; }
+  .article-meta { font-size: 0.85rem; color: #64748b; }
+  .qa-block { border-left: 4px solid #0066ff; padding: 18px 22px; background: #f0f6ff; border-radius: 0 8px 8px 0; margin: 32px 0; }
+  .qa-label { font-size: 0.75rem; font-weight: 700; color: #0066ff; text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 8px; }
+  .qa-block p { margin-bottom: 8px; color: #1a1a1a; }
+  .qa-block p:last-child { margin-bottom: 0; }
+  article { padding: 36px 0 56px; }
+  article h2 { font-size: 1.35rem; color: #0a1929; margin: 36px 0 12px; font-weight: 700; }
+  article h3 { font-size: 1.1rem; color: #0a1929; margin: 24px 0 8px; font-weight: 600; }
+  article p { margin-bottom: 18px; color: #2a2a2a; }
+  article ul, article ol { margin: 0 0 18px 24px; }
+  article li { margin-bottom: 6px; color: #2a2a2a; }
+  blockquote { border-left: 4px solid #0066ff; padding: 12px 20px; background: #f8fafc; margin: 22px 0; color: #475569; font-style: italic; }
+  .cta-box { background: linear-gradient(135deg, #0066ff 0%, #0044cc 100%); color: white; padding: 32px; border-radius: 12px; text-align: center; margin: 40px 0; }
+  .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 10px; }
+  .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 20px; font-size: 0.97rem; }
+  .cta-btn { display: inline-block; background: #ffd60a; color: #1a1a1a; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+  .faq-section { border-top: 1px solid #e5e7eb; padding-top: 36px; margin-top: 8px; }
+  details { border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: #fafafa; }
+  details summary { font-weight: 600; cursor: pointer; color: #0a1929; }
+  details[open] summary { margin-bottom: 10px; }
+  details p { margin: 0; font-size: 0.97rem; }
+  .breadcrumb { padding: 14px 0; font-size: 0.85rem; color: #64748b; }
+  .breadcrumb a { color: #0066ff; text-decoration: none; }
+  footer { background: #0a1929; color: #cbd5e1; padding: 32px 0; text-align: center; font-size: 0.9rem; }
+  footer a { color: #93c5fd; text-decoration: none; margin: 0 10px; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-inner">
+    <a href="/" class="brand">SnapTask</a>
+    <ul>
+      <li><a href="/#how-it-works">How it works</a></li>
+      <li><a href="/#features">Features</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+    <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="nav-cta" rel="noopener">Get APK</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Best notes app for ADHD on Android</div>
+</div>
+
+<div class="container">
+  <div class="article-header">
+    <span class="article-tag">Android Tips</span>
+    <h1>Best Notes App for ADHD on Android: Capture Thoughts Before They Disappear</h1>
+    <div class="article-meta">May 3, 2026 &middot; Quordesk Labs &middot; 5 min read</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="qa-block">
+    <div class="qa-label">Quick Answer</div>
+    <p><strong>What is the best notes app for ADHD on Android?</strong></p>
+    <p>SnapTask. It adds an input field to the Android notification bar so capture takes 3 taps and 3 seconds. No account, no overwhelm, no premium gating. Free APK on Gumroad and APKPure. Works offline.</p>
+  </div>
+</div>
+
+<div class="container">
+<article>
+
+<h2>The ADHD problem with notes apps</h2>
+
+<p>You think of something important. By the time you have unlocked your phone, found the app, opened it, waited for it to load, tapped compose, and looked at the empty input field, the thought is partly gone. What you write down is a smaller, blurrier version of the original.</p>
+
+<p>This is not a discipline problem. It is a friction problem. Capture has to happen in the same moment as the thought, or the thought is lost.</p>
+
+<blockquote>
+  Capture friction stopped being the bottleneck once I could type the note before unlocking the phone.
+</blockquote>
+
+<h2>What ADHD brains actually need from a notes app</h2>
+
+<p>Honest list:</p>
+
+<ul>
+  <li>Open in under 1 second</li>
+  <li>No decisions to make before typing — no list to choose, no project to assign, no priority to set</li>
+  <li>Saves automatically, no "save" button to forget</li>
+  <li>Stays out of the way until you come back</li>
+  <li>Reminders that work without a paywall</li>
+</ul>
+
+<p>Most apps fail at item 1 alone. The popular ones fail at items 1, 2, and 5.</p>
+
+<h2>Why SnapTask works for ADHD capture</h2>
+
+<p>SnapTask runs a permanent foreground notification with an input field built into it. The notification shade is one swipe from anywhere — locked screen, home screen, inside any app, even mid-call.</p>
+
+<p>The capture flow:</p>
+
+<ol>
+  <li>Pull down the notification shade</li>
+  <li>Tap the SnapTask input field</li>
+  <li>Type the thought</li>
+  <li>Tap Send</li>
+</ol>
+
+<p>That is it. No app to unlock-find-open. No list to choose. No project to assign. No priority. The note lands in your inbox.</p>
+
+<h2>What about reminders?</h2>
+
+<p>Type a date shortcut at the end of your task and SnapTask will remind you on that day:</p>
+
+<ul>
+  <li><strong>tomorrow</strong> — schedules for the next day</li>
+  <li><strong>+2d</strong> — 2 days from now (works with any number)</li>
+  <li><strong>15 May</strong> — specific date</li>
+  <li><strong>15/03/2026</strong> — full date format</li>
+</ul>
+
+<p>Reminders are free. Not behind a Pro tier. The reasoning is simple: charging for reminders in a "do not forget" app is the wrong incentive.</p>
+
+<h2>What SnapTask does not do (on purpose)</h2>
+
+<p>To stay fast and ADHD-friendly, SnapTask intentionally does not have:</p>
+
+<ul>
+  <li>Multiple lists or projects to organize on entry</li>
+  <li>Priorities, labels, or filters</li>
+  <li>Cloud sync (and the account that goes with it)</li>
+  <li>Productivity dashboards or score systems</li>
+  <li>Ads</li>
+</ul>
+
+<p>The fewer decisions during capture, the more thoughts make it into the system.</p>
+
+<h2>How does SnapTask compare to other "ADHD-friendly" apps?</h2>
+
+<p>Many apps marketed for ADHD are still built around the standard "open app, choose list, set priority" pattern with bright colors. The friction is the same. SnapTask removes the friction itself.</p>
+
+<p>That said, more elaborate systems work for some ADHD users — TickTick, Todoist, and structured PKM tools all have their place. SnapTask is for the moments before those tools, when the thought is fresh and there is no time to organize.</p>
+
+<h2>Is SnapTask free?</h2>
+
+<p>Yes. The capture, task list, reminders, tags, and date shortcuts are all free. SnapTask Pro ($2/month) adds extra reminder customization. Capture and reminders themselves are not gated.</p>
+
+<h2>Where to download SnapTask</h2>
+
+<p>SnapTask is a free APK from:</p>
+
+<ul>
+  <li><a href="https://ftgygh.gumroad.com/l/snaptask-pro" rel="noopener">Gumroad</a> — direct download</li>
+  <li><a href="https://apkpure.com/p/com.snaptask.app" rel="noopener">APKPure</a></li>
+</ul>
+
+<p>The Google Play release is in closed testing and is expected to be public in mid-May 2026.</p>
+
+<div class="cta-box">
+  <h3>Catch the thought before it disappears.</h3>
+  <p>Free APK. No account. No overwhelm. Works offline.</p>
+  <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="cta-btn" rel="noopener">Download Free APK</a>
+</div>
+
+<div class="faq-section">
+  <h2>Frequently asked questions</h2>
+
+  <details>
+    <summary>What is the best notes app for ADHD on Android?</summary>
+    <p>SnapTask is built around the ADHD problem: capture in 3 taps, no decisions to make, no account, free reminders.</p>
+  </details>
+
+  <details>
+    <summary>Why do most notes apps fail for ADHD?</summary>
+    <p>The friction between thinking and writing is too long. Unlock, find icon, open, load, compose — by then, the thought is gone.</p>
+  </details>
+
+  <details>
+    <summary>Is SnapTask designed specifically for ADHD?</summary>
+    <p>It is not a clinical tool, but its core design happens to fit ADHD capture friction. Many of its early users describe themselves as ADHD.</p>
+  </details>
+
+  <details>
+    <summary>Does SnapTask have free reminders?</summary>
+    <p>Yes. Reminders are part of the free tier. Type a date shortcut at the end of your task and SnapTask handles the rest.</p>
+  </details>
+
+  <details>
+    <summary>Can I use SnapTask without an account?</summary>
+    <p>Yes. SnapTask requires no sign-up, no email, and no Google account. All notes stay on your device.</p>
+  </details>
+</div>
+
+<div style="margin-top:40px;padding-top:28px;border-top:1px solid #e5e7eb;">
+  <h2 style="font-size:1.2rem;margin-bottom:14px;color:#0a1929;">Related articles</h2>
+  <ul style="list-style:none;margin:0;padding:0;">
+    <li style="margin-bottom:10px;"><a href="/blog/android-notification-bar-notes-app/" style="color:#0066ff;text-decoration:none;font-weight:500;">How to add notes from the Android notification bar</a></li>
+    <li style="margin-bottom:10px;"><a href="/blog/best-notes-app-students-android/" style="color:#0066ff;text-decoration:none;font-weight:500;">Best notes app for students on Android</a></li>
+    <li style="margin-bottom:10px;"><a href="/blog/lightest-notes-app-android-under-4mb/" style="color:#0066ff;text-decoration:none;font-weight:500;">Lightest notes app for Android: under 4 MB</a></li>
+    <li style="margin-bottom:10px;"><a href="/blog/google-keep-alternative-android-no-account/" style="color:#0066ff;text-decoration:none;font-weight:500;">Best Google Keep alternative with no account</a></li>
+  </ul>
+</div>
+
+<p style="margin-top:36px;"><a href="/blog/">&larr; Back to Blog</a></p>
+
+</article>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Quordesk Labs &middot; Built in Morocco</p>
+    <p style="margin-top:10px;">
+      <a href="/">Home</a> &middot;
+      <a href="/blog/">Blog</a> &middot;
+      <a href="/privacy.html">Privacy Policy</a> &middot;
+      <a href="https://ftgygh.gumroad.com/l/snaptask-pro">Download APK</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
