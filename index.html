@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Primary SEO -->
-<title>SnapTask - Add Notes From Your Android Notification Bar</title>
-<meta name="description" content="Add notes and tasks from your Android notification bar. SnapTask saves quick thoughts without opening an app. Free APK, no account, no ads, offline, 17-language UI.">
-<meta name="keywords" content="android notification bar notes, add notes from notification bar, quick note android notification, android task app notification bar, offline todo app android, snaptask">
+<title>SnapTask - Quick Capture Notes & Tasks on Android (Notification Bar + Share Sheet)</title>
+<meta name="description" content="The fastest way to save a thought on Android. Type in the notification bar OR share text from any app — Chrome, WhatsApp, Gmail, anywhere — straight into SnapTask. Free APK, no account, no ads, offline, 17-language UI.">
+<meta name="keywords" content="android notification bar notes, share text to notes app, quick note android, save text from any app android, android task app, offline todo app android, share to notes android, snaptask">
 <meta name="author" content="Quordesk Labs">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://snaptask.org/">
@@ -15,15 +15,15 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://snaptask.org/">
-<meta property="og:title" content="SnapTask - Add Notes From Your Android Notification Bar">
-<meta property="og:description" content="Pull down, type, send. SnapTask lets you add notes and tasks from your Android notification bar. Free APK, no account, no ads.">
+<meta property="og:title" content="SnapTask - Capture Anything on Android Without Opening An App">
+<meta property="og:description" content="Type in the notification bar, or share text from any app — Chrome, WhatsApp, Gmail — straight into SnapTask. Free APK, no account, no ads, offline.">
 <meta property="og:image" content="https://snaptask.org/og-image.png">
 <meta property="og:site_name" content="SnapTask">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SnapTask - Android Notification Bar Notes">
-<meta name="twitter:description" content="Add notes and tasks without opening an app. Type directly in your Android notification bar. Free APK, no account, no ads.">
+<meta name="twitter:title" content="SnapTask - Capture Anything on Android">
+<meta name="twitter:description" content="Notification bar + share-from-any-app. Save text from Chrome, WhatsApp, Gmail in two taps. Free APK, no account, no ads, offline.">
 <meta name="twitter:image" content="https://snaptask.org/og-image.png">
 
 <!-- Favicon -->
@@ -37,17 +37,19 @@
   "name": "SnapTask",
   "operatingSystem": "Android 7.0+",
   "applicationCategory": "ProductivityApplication",
-  "description": "Add notes and tasks directly from your Android notification bar. No app to open. Free APK, no account, no ads, offline-first, with date shortcuts for reminders.",
+  "description": "Capture notes and tasks on Android without opening any app. Type directly in the notification bar, or share text from any app (Chrome, WhatsApp, Gmail, Twitter) straight into SnapTask. Free APK, no account, no ads, offline-first, with date shortcuts for reminders.",
   "url": "https://snaptask.org/",
   "downloadUrl": "https://ftgygh.gumroad.com/l/snaptask-pro",
   "softwareVersion": "1.0.0",
   "isAccessibleForFree": true,
   "featureList": [
     "Add notes and tasks from the Android notification bar",
+    "Share text from any Android app straight into SnapTask",
+    "Save quotes, links, and snippets from Chrome, WhatsApp, Gmail, Twitter",
     "Quick date shortcuts for reminders",
     "Offline-first local storage",
     "No account required",
-    "No ads",
+    "No ads, no tracking",
     "17-language user interface"
   ],
   "author": {
@@ -83,6 +85,22 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "SnapTask runs a persistent notification on your Android device. Tap it, type your note or task directly in the notification, and tap Send. It is saved instantly without opening the app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I save text from any Android app to SnapTask?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Long-press any text in Chrome, WhatsApp, Gmail, Twitter, or any other Android app, tap Share, and choose SnapTask. The text is saved instantly to your inbox with no app launch and no extra screens. This works because SnapTask registers as an Android share target for plain text."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the fastest way to take notes on Android?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For new thoughts, the fastest path is typing directly into a notification-bar input field — no app to open. For existing text in another app (a quote, a link, a paragraph), the fastest path is the Android share sheet. SnapTask supports both: a persistent notification input and a system share target. Most apps support only one or neither."
       }
     },
     {
@@ -598,10 +616,10 @@
     <a href="#" class="brand">SnapTask</a>
     <ul>
       <li><a href="#how-it-works">How it works</a></li>
+      <li><a href="#share">Share sheet</a></li>
       <li><a href="#screenshots">Screens</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#compare">Compare</a></li>
-      <li><a href="#languages">Languages</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="/blog/">Blog</a></li>
     </ul>
@@ -612,8 +630,8 @@
 <!-- HERO -->
 <header class="hero">
   <div class="container">
-    <h1>Add Notes Without Opening Any App</h1>
-    <p class="subtitle">SnapTask lives in your Android notification bar. Pull down, type a note or task, tap Send. It is the fastest way to save a thought on Android.</p>
+    <h1>Capture anything. Without opening an app.</h1>
+    <p class="subtitle">Type a note in your Android notification bar, or share text from <strong>any app</strong> — Chrome, WhatsApp, Gmail, Twitter — straight into SnapTask. Two taps to saved. No account. Offline.</p>
     <div class="hero-demo" aria-label="SnapTask notification bar demo">
       <video autoplay muted loop playsinline preload="metadata" poster="screenshots/screen2_notification.png">
         <source src="media/hero-notification-demo.mp4" type="video/mp4">
@@ -626,27 +644,27 @@
       <a href="#how-it-works" class="cta-secondary">See how it works ↓</a>
     </div>
     <div class="hero-notice">Not public on Google Play yet. The free Android beta is available now from Gumroad and APKPure.</div>
-    <div class="hero-meta">No account · No ads · Works offline · Android 7.0+</div>
+    <div class="hero-meta">Notification bar · Share sheet · No account · No ads · Offline · Android 7.0+</div>
   </div>
 </header>
 
 <!-- TRUST STRIP -->
 <section class="trust-strip" aria-label="SnapTask highlights">
   <div class="container trust-grid">
-    <div class="trust-item"><strong>Free APK</strong><span>Install the Android beta today.</span></div>
-    <div class="trust-item"><strong>No account</strong><span>Open the app and start saving notes.</span></div>
-    <div class="trust-item"><strong>No ads</strong><span>A calm utility, not another feed.</span></div>
-    <div class="trust-item"><strong>Offline-first</strong><span>Your notes stay on your device.</span></div>
+    <div class="trust-item"><strong>Notification bar</strong><span>Type without opening an app.</span></div>
+    <div class="trust-item"><strong>Share from anywhere</strong><span>Save text from any Android app.</span></div>
+    <div class="trust-item"><strong>No account, no ads</strong><span>Just open it and use it.</span></div>
+    <div class="trust-item"><strong>Offline · &lt; 4 MB</strong><span>Tiny, private, fast.</span></div>
   </div>
 </section>
 
 <!-- QUICK ANSWER (AEO) -->
-<section class="quick-answer" aria-label="Quick answer: how to add notes from Android notification bar">
+<section class="quick-answer" aria-label="Quick answer: how to capture notes on Android without opening an app">
   <div class="container">
     <div class="qa-block">
       <div class="qa-label">Quick Answer</div>
-      <p><strong>How do you add notes from the Android notification bar without opening any app?</strong></p>
-      <p>Install SnapTask on Android. It adds a permanent input field to your notification bar. Pull down the shade, type your note or task, tap Send — saved in under 2 seconds. No app to open, no account, no ads. Works offline on Android 7.0 and above. Free APK available on Gumroad and APKPure.</p>
+      <p><strong>What is the fastest way to capture a note or text on Android without opening an app?</strong></p>
+      <p>Install SnapTask. It gives you two zero-friction capture flows: (1) type directly in a permanent notification-bar input field, and (2) long-press text in any other app — Chrome, WhatsApp, Gmail, Twitter — tap Share, choose SnapTask. Either way, the note is saved in under two seconds with no app launch, no account, and no ads. Works offline on Android 7.0+. Free APK on Gumroad and APKPure.</p>
     </div>
   </div>
 </section>
@@ -654,15 +672,15 @@
 <!-- PROBLEM -->
 <section>
   <div class="container">
-    <h2>Why do you keep forgetting tasks on Android?</h2>
-    <p>You have an idea. You unlock your phone, find the app, wait for it to load, tap "+", type, save. By the time you're done, the thought is half-formed — or gone.</p>
+    <h2>Why do you keep losing thoughts and useful text on Android?</h2>
+    <p>Two things happen all day, and most apps make both painful:</p>
     <ul class="problem-list">
-      <li>Opening Todoist, Google Keep, or Notion takes 4–8 taps.</li>
-      <li>By the time the app loads, you've lost the thought.</li>
-      <li>Voice notes pile up unsorted and forgotten.</li>
-      <li>Sticky-note widgets clutter your home screen.</li>
+      <li>You have a fresh idea — but opening Todoist, Keep, or Notion takes 4–8 taps. The thought is gone before the app loads.</li>
+      <li>You read a quote, a link, a paragraph in Chrome or WhatsApp — but copy-paste into a notes app means switching apps, finding the right note, pasting, going back.</li>
+      <li>Voice notes pile up unsorted. Sticky-note widgets clutter your home screen.</li>
+      <li>Most apps demand an account and an internet connection before you can save a single line.</li>
     </ul>
-    <p>SnapTask fixes this by putting a simple input exactly where you already look — your notification bar.</p>
+    <p>SnapTask fixes both with two zero-friction capture flows: <strong>notification-bar input</strong> for fresh thoughts, <strong>system share sheet</strong> for text you're already reading. No app launch needed for either.</p>
   </div>
 </section>
 
@@ -703,6 +721,55 @@
   </div>
 </section>
 
+<!-- SHARE FROM ANY APP -->
+<section id="share">
+  <div class="container">
+    <h2>How do I save text from any Android app to SnapTask?</h2>
+    <p>SnapTask registers as a system share target for plain text. That means every Android app with a Share button can send text into SnapTask in two taps — no copy-paste, no app switching.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Long-press any text or tap Share</h3>
+          <p>In Chrome, WhatsApp, Gmail, Twitter, Reddit, Telegram, your browser, your news reader — anywhere. The Android share sheet appears.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>Choose SnapTask</h3>
+          <p>SnapTask sits in the share sheet next to Messages, Email, and Drive. One tap.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>Done — saved silently</h3>
+          <p>No screen opens. No flash. The text is in your SnapTask inbox the next time you check it. Up to 10 KB of text per share.</p>
+        </div>
+      </div>
+    </div>
+    <div class="use-cases" style="margin-top:36px;">
+      <div class="use-case">
+        <h3>📰 Reading an article</h3>
+        <p>Highlight a paragraph in Chrome, share to SnapTask, keep reading. Review later.</p>
+      </div>
+      <div class="use-case">
+        <h3>💬 WhatsApp message</h3>
+        <p>Long-press a message with an address, a code, a phone number — share to SnapTask, never lose it in the chat scroll.</p>
+      </div>
+      <div class="use-case">
+        <h3>📧 Email follow-up</h3>
+        <p>Share the relevant lines from a Gmail thread into SnapTask with "+2d" appended — instant scheduled reminder.</p>
+      </div>
+      <div class="use-case">
+        <h3>🐦 Tweet or Reddit post</h3>
+        <p>Share interesting threads or quotes straight to your inbox. Build a personal swipe file in seconds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SCREENSHOTS -->
 <section class="alt" id="screenshots">
   <div class="container">
@@ -738,29 +805,34 @@
     <h2>What makes SnapTask different from Google Keep and Todoist?</h2>
     <div class="features">
       <div class="feature">
+        <div class="feature-icon">🔔</div>
+        <h3>Notification-bar input</h3>
+        <p>A persistent notification with an inline input field. Pull down, type, send — saved without ever opening the app.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📤</div>
+        <h3>Share from any app</h3>
+        <p>Long-press text in Chrome, WhatsApp, Gmail, Twitter — anywhere. Tap Share → SnapTask. Saved silently in two taps.</p>
+      </div>
+      <div class="feature">
         <div class="feature-icon">⚡</div>
         <h3>Save in seconds</h3>
-        <p>From thought to saved note in a couple of taps. No app launch, no loading screen, no clutter.</p>
+        <p>Both flows are sub-2-second from intent to saved. No loading screen. No nav. No clutter.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">🌍</div>
         <h3>17-language UI</h3>
-        <p>The app UI is available in 17 languages. Supported date shortcuts like "tomorrow", "+2d", and "15/03/2026" keep saving fast.</p>
+        <p>The app UI is available in 17 languages. Date shortcuts like "tomorrow", "+2d", and "15/03/2026" keep saving fast.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">🔒</div>
-        <h3>100% offline</h3>
-        <p>No account. No cloud. No tracking. Your tasks live on your device only.</p>
+        <h3>100% offline · no account</h3>
+        <p>No login. No cloud. No tracking. Your notes live on your device only.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">🪶</div>
-        <h3>Lightweight</h3>
-        <p>Under 4 MB. Less than 1% daily battery. No background polling, no ads, no bloat.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🔔</div>
-        <h3>Date shortcuts</h3>
-        <p>"tomorrow", "+2d", "15 march", "15/03/2026" — just write it. No date picker required.</p>
+        <h3>Under 4 MB</h3>
+        <p>Less than 1% daily battery. No background polling, no ads, no bloat.</p>
       </div>
     </div>
   </div>
@@ -993,6 +1065,16 @@
     </details>
 
     <details>
+      <summary>How do I save text from another app (Chrome, WhatsApp, Gmail) to SnapTask?</summary>
+      <p>Long-press any text or tap Share in any Android app, then choose SnapTask from the share sheet. The selected text is saved straight into your inbox — no copy-paste, no app switching, no screen flash. SnapTask supports plain text up to 10 KB per share, so you can save quotes, paragraphs, links, addresses, codes, and message snippets in two taps.</p>
+    </details>
+
+    <details>
+      <summary>What is the fastest way to take notes on Android?</summary>
+      <p>It depends on where the text is coming from. For a fresh thought, type directly into the notification-bar input — zero app launches. For text already in another app, use the share sheet. SnapTask is built around both flows so you never have to context-switch to save something.</p>
+    </details>
+
+    <details>
       <summary>Is SnapTask free?</summary>
       <p>Yes. Saving notes from the notification bar, the task list, tags, and basic reminders are free. SnapTask Pro ($2/month) unlocks advanced reminders, custom badges, and priority feature requests.</p>
     </details>
@@ -1014,7 +1096,7 @@
 
     <details>
       <summary>How is SnapTask different from Google Keep or Todoist?</summary>
-      <p>Google Keep and Todoist require you to open the app every time. SnapTask's notification-bar input is faster for the most common use case: jotting a quick note or task. SnapTask focuses on saving thoughts quickly; it is not trying to replace your full project manager.</p>
+      <p>Google Keep and Todoist require you to open the app — or open a widget — every time. SnapTask is built around two zero-launch capture flows: a permanent notification-bar input for fresh thoughts, and a system share target for text from other apps. It also requires no account, runs fully offline, has no ads, and is under 4 MB. SnapTask isn't trying to replace a full project manager — it's the fastest path from intent to saved note.</p>
     </details>
 
     <details>
@@ -1033,8 +1115,8 @@
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="container">
-    <h2>Add the thought before it disappears.</h2>
-    <p>Free Android beta. No account required. No ads. Google Play release is still in closed testing.</p>
+    <h2>Capture the thought. Capture the quote. Move on.</h2>
+    <p>Notification bar for fresh thoughts. Share sheet for text from any app. Free Android beta — no account, no ads, offline. Google Play release still in closed testing.</p>
     <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="cta-button" rel="noopener">Download Free APK</a>
     <a href="https://apkpure.com/p/com.snaptask.app" class="cta-button-alt" rel="noopener">Get it on APKPure</a>
   </div>
