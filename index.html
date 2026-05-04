@@ -342,34 +342,48 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
-  .available-on a.ao-badge {
+  .available-on a.ao-badge,
+  .available-on span.ao-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     padding: 10px 16px;
-    border: 1px solid #d6dbe3;
     border-radius: 8px;
-    background: #f8fafc;
-    color: #0a1929;
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 600;
-    transition: border-color 0.15s ease, background 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
   }
-  .available-on a.ao-badge:hover {
-    border-color: #2196f3;
-    background: #eef6ff;
-  }
-  .available-on a.ao-badge .ao-sub {
-    color: #64748b;
-    font-weight: 400;
+  .available-on a.ao-badge .ao-sub,
+  .available-on span.ao-badge .ao-sub {
+    font-weight: 500;
     font-size: 0.8rem;
+    opacity: 0.85;
   }
-  .available-on a.ao-badge.ao-soon {
-    opacity: 0.55;
+  .available-on a.ao-badge.ao-gumroad {
+    background: #ff90e8;
+    color: #0a1929;
+    border: 1px solid #e668c8;
+  }
+  .available-on a.ao-badge.ao-apkpure {
+    background: #61cd5a;
+    color: #ffffff;
+    border: 1px solid #4fb84a;
+  }
+  .available-on a.ao-badge.ao-apkpure .ao-sub { color: #eafff0; opacity: 0.95; }
+  .available-on a.ao-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.14);
+    filter: brightness(1.04);
+  }
+  .available-on span.ao-badge.ao-soon {
+    background: #f1f5f9;
+    color: #64748b;
+    border: 1px dashed #cbd5e1;
     cursor: default;
-    pointer-events: none;
   }
+  .available-on span.ao-badge.ao-soon .ao-sub { color: #94a3b8; }
   h2 {
     font-size: clamp(1.6rem, 3vw, 2.25rem);
     margin-bottom: 16px;
@@ -730,8 +744,8 @@
 <section class="available-on" aria-label="Where to download SnapTask">
   <div class="container">
     <span class="ao-label">Available on</span>
-    <a class="ao-badge" href="https://ftgygh.gumroad.com/l/snaptask-pro" rel="noopener">Gumroad <span class="ao-sub">free APK</span></a>
-    <a class="ao-badge" href="https://apkpure.com/p/com.snaptask.app" rel="noopener">APKPure <span class="ao-sub">free APK</span></a>
+    <a class="ao-badge ao-gumroad" href="https://ftgygh.gumroad.com/l/snaptask-pro" rel="noopener">Gumroad <span class="ao-sub">free APK</span></a>
+    <a class="ao-badge ao-apkpure" href="https://apkpure.com/p/com.snaptask.app" rel="noopener">APKPure <span class="ao-sub">free APK</span></a>
     <span class="ao-badge ao-soon" aria-disabled="true">Google Play <span class="ao-sub">closed testing</span></span>
   </div>
 </section>
