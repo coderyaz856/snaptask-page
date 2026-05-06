@@ -96,6 +96,19 @@
   .qa-label { font-size: 0.75rem; font-weight: 700; color: #0066ff; text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 8px; }
   .qa-block p { margin-bottom: 8px; color: #1a1a1a; }
   .qa-block p:last-child { margin-bottom: 0; }
+  .decision-box { margin: 0 0 36px; padding: 24px; border: 1px solid #dbeafe; background: #f8fbff; border-radius: 12px; }
+  .decision-box h2 { margin: 0 0 10px; font-size: 1.2rem; color: #0a1929; }
+  .decision-box > p { margin-bottom: 18px; color: #334155; }
+  .decision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 18px; }
+  .decision-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 16px; }
+  .decision-card strong { display: block; color: #0a1929; margin-bottom: 8px; }
+  .decision-card ul { margin: 0 0 0 18px; }
+  .decision-card li { margin-bottom: 6px; }
+  .inline-cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 12px; }
+  .cta-btn-secondary { display: inline-block; background: #ffffff; color: #0066ff; border: 1px solid #bfdbfe; padding: 13px 22px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.96rem; }
+  .decision-links { margin: 0; font-size: 0.95rem; color: #475569; }
+  .decision-links a { color: #0066ff; text-decoration: none; font-weight: 600; }
+  .decision-links a:hover { text-decoration: underline; }
   article { padding: 36px 0 56px; }
   article h2 { font-size: 1.35rem; color: #0a1929; margin: 36px 0 12px; font-weight: 700; }
   article h3 { font-size: 1.1rem; color: #0a1929; margin: 24px 0 8px; font-weight: 600; }
@@ -163,6 +176,34 @@
 <div class="container">
 <article>
 
+<div class="decision-box">
+  <h2>Quick decision: should you switch from Google Keep?</h2>
+  <p>If your main job for a notes app is catching ideas fast on Android, the decision is mostly about capture friction, not note formatting.</p>
+  <div class="decision-grid">
+    <div class="decision-card">
+      <strong>Choose SnapTask if you want:</strong>
+      <ul>
+        <li>No Google account and no cloud sync</li>
+        <li>3-step capture from the notification bar</li>
+        <li>Notes that stay local on your phone</li>
+      </ul>
+    </div>
+    <div class="decision-card">
+      <strong>Stay with Google Keep if you need:</strong>
+      <ul>
+        <li>Google account sync across all devices</li>
+        <li>Sticky notes, labels, and web access</li>
+        <li>A notes app built around the Google ecosystem</li>
+      </ul>
+    </div>
+  </div>
+  <div class="inline-cta-row">
+    <a href="https://ftgygh.gumroad.com/l/snaptask-pro" class="cta-btn" rel="noopener">Download SnapTask Free</a>
+    <a href="#comparison" class="cta-btn-secondary">See full comparison</a>
+  </div>
+  <p class="decision-links">Still comparing? Read <a href="/blog/best-offline-notes-app-android-no-account/">best offline notes apps on Android</a> or <a href="/blog/android-notification-bar-notes-app/">how notification-bar notes work</a>.</p>
+</div>
+
 <h2>Why look for a Google Keep alternative with no account?</h2>
 
 <p>Google Keep is convenient if you are already in the Google ecosystem. But it has three issues that push users to look for alternatives:</p>
@@ -179,7 +220,7 @@
 
 <p>No. Google Keep requires a Google account sign-in and has no offline-only mode. If you do not have or want a Google account on your phone, Google Keep is not an option.</p>
 
-<h2>What are the best Google Keep alternatives with no account on Android?</h2>
+<h2 id="comparison">What are the best Google Keep alternatives with no account on Android?</h2>
 
 <p>Here is a comparison of the main options:</p>
 
