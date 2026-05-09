@@ -711,7 +711,7 @@
       <li><a href="#faq">FAQ</a></li>
       <li><a href="/blog/">Blog</a></li>
     </ul>
-    <a href="/snaptask.apk" class="nav-cta" download>Get APK</a>
+    <a href="/snaptask.apk" class="nav-cta apk-download" download data-apk-download>Get APK</a>
   </div>
 </nav>
 
@@ -727,7 +727,7 @@
       </video>
     </div>
     <div class="hero-actions">
-      <a href="/snaptask.apk" class="cta-button" download>Download Free APK · 3 MB</a>
+      <a href="/snaptask.apk" class="cta-button apk-download" download data-apk-download>Download Free APK · 3 MB</a>
       <a href="https://apkpure.com/p/com.snaptask.app" class="cta-button-alt" rel="noopener">Get it on APKPure</a>
       <a href="#how-it-works" class="cta-secondary">See how it works ↓</a>
     </div>
@@ -750,7 +750,7 @@
 <section class="available-on" aria-label="Where to download SnapTask">
   <div class="container">
     <span class="ao-label">Available on</span>
-    <a class="ao-badge ao-gumroad" href="/snaptask.apk" download>Direct <span class="ao-sub">free APK · 3 MB</span></a>
+    <a class="ao-badge ao-gumroad apk-download" href="/snaptask.apk" download data-apk-download>Direct <span class="ao-sub">free APK · 3 MB</span></a>
     <a class="ao-badge ao-apkpure" href="https://apkpure.com/p/com.snaptask.app" rel="noopener">APKPure <span class="ao-sub">free APK</span></a>
     <a class="ao-badge ao-alternativeto" href="https://alternativeto.net/software/snaptask/" rel="noopener">AlternativeTo <span class="ao-sub">listed</span></a>
     <span class="ao-badge ao-soon" aria-disabled="true">Google Play <span class="ao-sub">closed testing</span></span>
@@ -1216,7 +1216,7 @@
   <div class="container">
     <h2>Capture the thought. Capture the quote. Move on.</h2>
     <p>Notification bar for fresh thoughts. Share sheet for text from any app. Free Android beta — no account, no ads, offline. Google Play release still in closed testing.</p>
-    <a href="/snaptask.apk" class="cta-button" download>Download Free APK · 3 MB</a>
+    <a href="/snaptask.apk" class="cta-button apk-download" download data-apk-download>Download Free APK · 3 MB</a>
     <a href="https://apkpure.com/p/com.snaptask.app" class="cta-button-alt" rel="noopener">Get it on APKPure</a>
   </div>
 </section>
@@ -1253,6 +1253,30 @@
     </div>
   </div>
 </footer>
+
+<!-- APK download tracker (counterapi.dev — free, public, no auth) -->
+<script>
+(function () {
+  var COUNTER_URL = 'https://api.counterapi.dev/v1/snaptask/apk-downloads/up';
+  var STORAGE_KEY = 'snaptask_apk_dl_session';
+  function track() {
+    // Only count once per browser session to reduce noise from same user clicking twice
+    if (sessionStorage.getItem(STORAGE_KEY)) return;
+    sessionStorage.setItem(STORAGE_KEY, '1');
+    try {
+      // sendBeacon survives navigation; fallback to fetch with keepalive
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(COUNTER_URL);
+      } else {
+        fetch(COUNTER_URL, { method: 'GET', keepalive: true, mode: 'no-cors' });
+      }
+    } catch (e) { /* swallow — must not block the download */ }
+  }
+  document.querySelectorAll('a[data-apk-download]').forEach(function (el) {
+    el.addEventListener('click', track, { passive: true });
+  });
+})();
+</script>
 
 </body>
 </html>
