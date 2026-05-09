@@ -1264,12 +1264,9 @@
     if (sessionStorage.getItem(STORAGE_KEY)) return;
     sessionStorage.setItem(STORAGE_KEY, '1');
     try {
-      // sendBeacon survives navigation; fallback to fetch with keepalive
-      if (navigator.sendBeacon) {
-        navigator.sendBeacon(COUNTER_URL);
-      } else {
-        fetch(COUNTER_URL, { method: 'GET', keepalive: true, mode: 'no-cors' });
-      }
+      // counterapi.dev only accepts GET on /up — sendBeacon would POST and 404.
+      // keepalive lets the request finish even after navigation to the APK file.
+      fetch(COUNTER_URL, { method: 'GET', mode: 'no-cors', keepalive: true, cache: 'no-store' });
     } catch (e) { /* swallow — must not block the download */ }
   }
   document.querySelectorAll('a[data-apk-download]').forEach(function (el) {
