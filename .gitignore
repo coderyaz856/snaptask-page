@@ -1,0 +1,9 @@
+# Ignore all media assets except the live hero video referenced from index.html
+media/*
+!media/hero-notification-demo.mp4
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
