@@ -15,8 +15,8 @@ SnapTask is a free Android app that adds a permanent input field to the Android 
 - No ads
 - UI available in 17 languages: English, French, Spanish, Arabic, German, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Turkish, Polish, Swedish, Hindi, Indonesian
 - Supported date shortcuts: tomorrow, +2d, Friday, next Friday, 15 May, 15/03/2026
-- Free tier: full note-taking and task management
-- Pro tier: $2/month (advanced badges, customization)
+- Free tier: full note-taking, task management, reminders, and date shortcuts
+- Pro tier: $2/month (custom notification badges, markdown export)
 
 ## How It Works
 
