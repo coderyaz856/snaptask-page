@@ -15,10 +15,7 @@ SnapTask is an Android productivity app that lives in your **notification bar**.
 
 - ⚡ **Capture from anywhere** — persistent notification with inline reply
 - 🌍 **17 languages** — natural language date parsing in English, French, Spanish, German, Italian, Portuguese, Arabic, Russian, Chinese, Japanese, Korean, Hindi, Turkish, Dutch, Polish, Swedish, and Indonesian
-- 🏷️ **Smart tags** — `#work`, `#personal`, fuzzy-matched
-- 🔔 **Reliable reminders** — exact alarms with reboot persistence
 - 💾 **Local-first** — your tasks stay on your device (Room/SQLite)
-- 🎨 **Material 3 + edge-to-edge** — Jetpack Compose, no XML
 
 Read more on **[snaptask.org](https://snaptask.org)**.
 
