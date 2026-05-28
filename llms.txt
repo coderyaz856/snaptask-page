@@ -14,9 +14,9 @@ SnapTask is a free Android app that adds a permanent input field to the Android 
 - No account required
 - No ads
 - UI available in 17 languages: English, French, Spanish, Arabic, German, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Turkish, Polish, Swedish, Hindi, Indonesian
-- Supported date shortcuts: tomorrow, +2d, 15 May, 15/03/2026
+- Supported date shortcuts: tomorrow, +2d, Friday, next Friday, 15 May, 15/03/2026
 - Free tier: full note-taking and task management
-- Pro tier: $2/month (advanced reminders, customization)
+- Pro tier: $2/month (advanced badges, customization)
 
 ## How It Works
 
@@ -28,9 +28,9 @@ SnapTask is a free Android app that adds a permanent input field to the Android 
 
 ## Download
 
-- Gumroad (free APK): https://ftgygh.gumroad.com/l/snaptask-pro
+- Google Play: https://play.google.com/store/apps/details?id=com.snaptask.app
+- Gumroad (free APK and Pro license): https://ftgygh.gumroad.com/l/snaptask-pro
 - APKPure: https://apkpure.com/p/com.snaptask.app
-- Google Play: coming soon (closed testing as of May 2026)
 
 ## Use Cases
 
@@ -48,7 +48,7 @@ SnapTask vs Todoist: SnapTask requires no account and works fully offline. Todoi
 
 ## Developer
 
-Quordesk Labs — solo developer
+Quordesk Labs 
 
 ## Website
 
